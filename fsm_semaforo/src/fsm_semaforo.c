@@ -5,48 +5,12 @@
 
 #include "timer.h"
 
-#define TIMEOUT (1)
-
-static int fsm_semaforo_check(fsm_t* f)
-{
-    fsm_semaforo_t* fp = (fsm_semaforo_t*) ;
-
-    if (fp->check) {
-        return fp->check();
-    }
-    return 0;
-}
-
-static int fsm_semaforo_is_timeout(fsm_t* f)
-{
-    fsm_semaforo_t* fp = (fsm_semaforo_t*)f;
-    return (timer_get_tick() >= fp->next_timeout);
-}
-
-static void fsm_semaforo_set_timeout(fsm_t* f)
-{
-    fsm_semaforo_t* fp = (fsm_semaforo_t*)f;
-    fp->next_timeout = timer_get_tick() + fp->time_timeout;
-}
-
-static void fsm_semaforo_reset(fsm_t* f)
-{
-    fsm_semaforo_t* fp = (fsm_semaforo_t*)f;
-    if (fp->reset) {
-        fp->reset();
-    }
-}
-
 static fsm_trans_t semaforo_tt[] = {
-    {READY, fsm_semaforo_check, WAIT, fsm_semaforo_set_timeout},
-    {WAIT, fsm_semaforo_is_timeout, READY, fsm_semaforo_reset},
-    {-1, NULL, -1, NULL}
-};
+    {-1, NULL, -1, NULL},
+    {-1, NULL, -1, NULL}};
 
-void fsm_semaforo_init(fsm_semaforo_t* f, fsm_semaforo_check_func_t check, fsm_semaforo_reset_func_t reset, uint32_t timeout)
-{
-    fsm_init((fsm_t*)f, semaforo_tt);
-    f->check = check;
-    f->reset = reset;
-    f->time_timeout = timeout;
+void fsm_semaforo_init(fsm_semaforo_t *f, fsm_semaforo_espira_func_t espira, fsm_semaforo_botonP_func_t botonP, fsm_semaforo_botonS_func_t botonS,
+                       int p_verde, int p_amarillo, int p_rojo, int p_peaton, int s_verde, int s_amarillo, int s_rojo, int s_peaton, int deadline){
+
+fsm_init((fsm_t *)f, semaforo_tt);
 }
