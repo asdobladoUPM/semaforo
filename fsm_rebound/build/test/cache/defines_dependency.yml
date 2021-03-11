@@ -1,0 +1,9 @@
+---
+build/test/mocks/mock_client.c:
+- TEST
+build/test/mocks/mock_timer.c:
+- TEST
+src/fsm.c:
+- TEST
+src/fsm_rebound.c:
+- TEST

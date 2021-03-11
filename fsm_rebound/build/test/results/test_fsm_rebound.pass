@@ -1,0 +1,78 @@
+---
+:source:
+  :path: test
+  :file: test_fsm_rebound.c
+:successes:
+- :test: test_fsm_rebound_fsmInitFillsStructWithSomething
+  :line: 20
+  :message: ''
+  :unity_test_time: 0
+- :test: test_fsm_rebound_fsmFireCallsCheckWhenReady
+  :line: 31
+  :message: ''
+  :unity_test_time: 0
+- :test: test_fsm_rebound_fsmFireNoCallsCheckWhenWait
+  :line: 43
+  :message: ''
+  :unity_test_time: 0
+- :test: test_fsm_rebound_fsmFireFollowsTransitionWhenReadyAndCheckIsTrue
+  :line: 54
+  :message: ''
+  :unity_test_time: 0
+- :test: test_fsm_rebound_fsmFireDontFollowTransitionWhenReadyAndCheckIsFalse
+  :line: 67
+  :message: ''
+  :unity_test_time: 0
+- :test: test_fsm_rebound_fsmFireCallsGetTickWhenWait
+  :line: 79
+  :message: ''
+  :unity_test_time: 0
+- :test: test_fsm_rebound_fsmFireNoCallsGetTickWhenReady
+  :line: 91
+  :message: ''
+  :unity_test_time: 0
+- :test: test_fsm_rebound_fsmFireFollowsTransitionWhenWaitAndIsTimeout
+  :line: 100
+  :message: ''
+  :unity_test_time: 0
+- :test: test_fsm_rebound_fsmFireDontFollowTransitionWhenWaitAndIsNoTimeout
+  :line: 115
+  :message: ''
+  :unity_test_time: 0
+- :test: test_fsm_rebound_fsmFireDontFollowTransitionWhenWaitAndIsTimeoutWithTickNoZero
+  :line: 130
+  :message: ''
+  :unity_test_time: 0
+- :test: test_fsm_rebound_fsmFireDontFollowTransitionWhenWaitAndIsNoTimeoutWithTickNoZero
+  :line: 146
+  :message: ''
+  :unity_test_time: 0
+- :test: test_fsm_rebound_fsmFireReadyToWaitUpdatesTimeout
+  :line: 161
+  :message: ''
+  :unity_test_time: 0
+- :test: test_fsm_rebound_fsmFireWaitToReadyWhenLongTickPassed
+  :line: 176
+  :message: ''
+  :unity_test_time: 0
+- :test: test_fsm_rebound_fsmFireWaitToWaitWhenLongTickPassedNotEnough
+  :line: 191
+  :message: ''
+  :unity_test_time: 0
+- :test: test_fsm_rebound_fsmFireWaitToReadyCallsResetFunction
+  :line: 206
+  :message: ''
+  :unity_test_time: 0
+- :test: test_fsm_rebound_fsmFireAntiReboundOf5Complete
+  :line: 221
+  :message: ''
+  :unity_test_time: 0
+:failures: []
+:ignores: []
+:counts:
+  :total: 16
+  :passed: 16
+  :failed: 0
+  :ignored: 0
+:stdout: []
+:time: 0.011201499999515363
