@@ -8,7 +8,8 @@ enum {
     P_VERTOAM,
     P_AMARILLO,
     S_VERDE,
-    S_VER
+    S_VERTOAM,
+    S_AMARILLO
 };
 
 #endif
