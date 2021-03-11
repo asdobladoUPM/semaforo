@@ -4,8 +4,11 @@
 #include "fsm.h"
 
 enum {
-    READY,
-    WAIT
+    P_VERDE,
+    P_VERTOAM,
+    P_AMARILLO,
+    S_VERDE,
+    S_VER
 };
 
 #endif

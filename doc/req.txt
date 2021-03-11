@@ -1,0 +1,8 @@
+Se desea implementa el control de un cruce de carrreteras regulado con semáforos, con una carretera principal y otra secundaria, y botones para indicar la intención de cruzar de los peatones
+
+Ambas carreteras tienen un semáforo con un paso de peatones
+La carretera principal está en verde para los vehículos todo el tiempo que sea posible
+La carretera secundaria tiene una espira que permite identificar cuándo hay coches esperrando en el semáforo
+Si un peatón quierre cruzar, tiene que presionar el botón correspondiente
+Un peatón no puede esperar indefinidamente para cruzar
+Un coche de la carretera secundaria no puede esperar indefinidamente para pasar
