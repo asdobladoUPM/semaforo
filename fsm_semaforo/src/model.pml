@@ -10,6 +10,9 @@ ltl peatonP_cruza {
 ltl peatonS_cruza {
 [] (<> botonS) -> [] (<> s_peaton)
 }
+ltl mal {
+	[] (p_verde && s_verde)
+}
 
 /* Entradas */
 int espira;
