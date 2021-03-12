@@ -21,8 +21,8 @@ int deadline;
 active proctype fsm () 
 {
     int estado = P_Verde;
-    int p_verde = 1;
-    int s_rojo = 1;
+    p_verde = 1;
+    s_rojo = 1;
     printf ("estado = %d, principal (r,a,v, peaton) = (%d, %d, %d, %d), secundario (r,a,v, peaton) = (%d, %d, %d, %d)\n",
 	    estado, p_verde, p_amarillo, p_rojo, p_peaton, s_verde, s_amarillo, s_rojo, s_peaton);
     do
