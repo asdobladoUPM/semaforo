@@ -5,13 +5,13 @@ ltl dosverdesomg {
 }
 
 ltl peatonP_cruza {
-[] (<> botonP) -> [] (<> p_peaton)
+[] botonP -> <> p_peaton
 }
 ltl peatonS_cruza {
-[] (<> botonS) -> [] (<> s_peaton)
+[] botonS -> <> s_peaton
 }
-ltl mal {
-	[] (p_verde -> s_verde)
+ltl espira {
+[] espira -> <> s_verde
 }
 
 /* Entradas */
