@@ -11,7 +11,7 @@ ltl peatonS_cruza {
 [] (<> botonS) -> [] (<> s_peaton)
 }
 ltl mal {
-	[] (p_verde && s_verde)
+	[] (p_verde -> s_verde)
 }
 
 /* Entradas */
