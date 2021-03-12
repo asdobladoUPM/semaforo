@@ -16,11 +16,12 @@ int s_amarillo;
 int s_rojo;
 int s_peaton;
 
+int estado;
 int deadline;
 
 active proctype fsm () 
 {
-    int estado = P_Verde;
+    estado = P_Verde;
     p_verde = 1;
     s_rojo = 1;
     printf ("estado = %d, principal (r,a,v, peaton) = (%d, %d, %d, %d), secundario (r,a,v, peaton) = (%d, %d, %d, %d)\n",
