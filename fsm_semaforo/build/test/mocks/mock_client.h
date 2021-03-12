@@ -24,26 +24,36 @@ void mock_client_Verify(void);
 
 
 
-#define custom_check_IgnoreAndReturn(cmock_retval) custom_check_CMockIgnoreAndReturn(__LINE__, cmock_retval)
-void custom_check_CMockIgnoreAndReturn(UNITY_LINE_TYPE cmock_line, int cmock_to_return);
-#define custom_check_StopIgnore() custom_check_CMockStopIgnore()
-void custom_check_CMockStopIgnore(void);
-#define custom_check_ExpectAndReturn(cmock_retval) custom_check_CMockExpectAndReturn(__LINE__, cmock_retval)
-void custom_check_CMockExpectAndReturn(UNITY_LINE_TYPE cmock_line, int cmock_to_return);
-typedef int (* CMOCK_custom_check_CALLBACK)(int cmock_num_calls);
-void custom_check_AddCallback(CMOCK_custom_check_CALLBACK Callback);
-void custom_check_Stub(CMOCK_custom_check_CALLBACK Callback);
-#define custom_check_StubWithCallback custom_check_Stub
-#define custom_reset_Ignore() custom_reset_CMockIgnore()
-void custom_reset_CMockIgnore(void);
-#define custom_reset_StopIgnore() custom_reset_CMockStopIgnore()
-void custom_reset_CMockStopIgnore(void);
-#define custom_reset_Expect() custom_reset_CMockExpect(__LINE__)
-void custom_reset_CMockExpect(UNITY_LINE_TYPE cmock_line);
-typedef void (* CMOCK_custom_reset_CALLBACK)(int cmock_num_calls);
-void custom_reset_AddCallback(CMOCK_custom_reset_CALLBACK Callback);
-void custom_reset_Stub(CMOCK_custom_reset_CALLBACK Callback);
-#define custom_reset_StubWithCallback custom_reset_Stub
+#define espira_IgnoreAndReturn(cmock_retval) espira_CMockIgnoreAndReturn(__LINE__, cmock_retval)
+void espira_CMockIgnoreAndReturn(UNITY_LINE_TYPE cmock_line, int cmock_to_return);
+#define espira_StopIgnore() espira_CMockStopIgnore()
+void espira_CMockStopIgnore(void);
+#define espira_ExpectAndReturn(cmock_retval) espira_CMockExpectAndReturn(__LINE__, cmock_retval)
+void espira_CMockExpectAndReturn(UNITY_LINE_TYPE cmock_line, int cmock_to_return);
+typedef int (* CMOCK_espira_CALLBACK)(int cmock_num_calls);
+void espira_AddCallback(CMOCK_espira_CALLBACK Callback);
+void espira_Stub(CMOCK_espira_CALLBACK Callback);
+#define espira_StubWithCallback espira_Stub
+#define botonS_IgnoreAndReturn(cmock_retval) botonS_CMockIgnoreAndReturn(__LINE__, cmock_retval)
+void botonS_CMockIgnoreAndReturn(UNITY_LINE_TYPE cmock_line, int cmock_to_return);
+#define botonS_StopIgnore() botonS_CMockStopIgnore()
+void botonS_CMockStopIgnore(void);
+#define botonS_ExpectAndReturn(cmock_retval) botonS_CMockExpectAndReturn(__LINE__, cmock_retval)
+void botonS_CMockExpectAndReturn(UNITY_LINE_TYPE cmock_line, int cmock_to_return);
+typedef int (* CMOCK_botonS_CALLBACK)(int cmock_num_calls);
+void botonS_AddCallback(CMOCK_botonS_CALLBACK Callback);
+void botonS_Stub(CMOCK_botonS_CALLBACK Callback);
+#define botonS_StubWithCallback botonS_Stub
+#define botonP_IgnoreAndReturn(cmock_retval) botonP_CMockIgnoreAndReturn(__LINE__, cmock_retval)
+void botonP_CMockIgnoreAndReturn(UNITY_LINE_TYPE cmock_line, int cmock_to_return);
+#define botonP_StopIgnore() botonP_CMockStopIgnore()
+void botonP_CMockStopIgnore(void);
+#define botonP_ExpectAndReturn(cmock_retval) botonP_CMockExpectAndReturn(__LINE__, cmock_retval)
+void botonP_CMockExpectAndReturn(UNITY_LINE_TYPE cmock_line, int cmock_to_return);
+typedef int (* CMOCK_botonP_CALLBACK)(int cmock_num_calls);
+void botonP_AddCallback(CMOCK_botonP_CALLBACK Callback);
+void botonP_Stub(CMOCK_botonP_CALLBACK Callback);
+#define botonP_StubWithCallback botonP_Stub
 
 #if defined(__GNUC__) && !defined(__ICC) && !defined(__TMS470__)
 #if __GNUC__ > 4 || (__GNUC__ == 4 && (__GNUC_MINOR__ > 6 || (__GNUC_MINOR__ == 6 && __GNUC_PATCHLEVEL__ > 0)))

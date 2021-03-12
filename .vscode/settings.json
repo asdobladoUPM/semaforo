@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.vhd": "vhdl",
+        "fsm.h": "c",
+        "fsm_semaforo.h": "c"
+    }
+}

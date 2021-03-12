@@ -17,8 +17,8 @@
    You should have received a copy of the GNU General Public License
    along with this program.  If not, see <http://www.gnu.org/licenses/>.  */
 
-#ifndef FSM_H
-#define FSM_H
+#ifndef _FSM_H
+#define _FSM_H
 
 typedef struct fsm_t fsm_t;
 

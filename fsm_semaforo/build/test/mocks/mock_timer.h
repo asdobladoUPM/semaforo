@@ -24,16 +24,16 @@ void mock_timer_Verify(void);
 
 
 
-#define timer_get_tick_IgnoreAndReturn(cmock_retval) timer_get_tick_CMockIgnoreAndReturn(__LINE__, cmock_retval)
-void timer_get_tick_CMockIgnoreAndReturn(UNITY_LINE_TYPE cmock_line, uint32_t cmock_to_return);
-#define timer_get_tick_StopIgnore() timer_get_tick_CMockStopIgnore()
-void timer_get_tick_CMockStopIgnore(void);
-#define timer_get_tick_ExpectAndReturn(cmock_retval) timer_get_tick_CMockExpectAndReturn(__LINE__, cmock_retval)
-void timer_get_tick_CMockExpectAndReturn(UNITY_LINE_TYPE cmock_line, uint32_t cmock_to_return);
-typedef uint32_t (* CMOCK_timer_get_tick_CALLBACK)(int cmock_num_calls);
-void timer_get_tick_AddCallback(CMOCK_timer_get_tick_CALLBACK Callback);
-void timer_get_tick_Stub(CMOCK_timer_get_tick_CALLBACK Callback);
-#define timer_get_tick_StubWithCallback timer_get_tick_Stub
+#define timer_IgnoreAndReturn(cmock_retval) timer_CMockIgnoreAndReturn(__LINE__, cmock_retval)
+void timer_CMockIgnoreAndReturn(UNITY_LINE_TYPE cmock_line, int cmock_to_return);
+#define timer_StopIgnore() timer_CMockStopIgnore()
+void timer_CMockStopIgnore(void);
+#define timer_ExpectAndReturn(cmock_retval) timer_CMockExpectAndReturn(__LINE__, cmock_retval)
+void timer_CMockExpectAndReturn(UNITY_LINE_TYPE cmock_line, int cmock_to_return);
+typedef int (* CMOCK_timer_CALLBACK)(int cmock_num_calls);
+void timer_AddCallback(CMOCK_timer_CALLBACK Callback);
+void timer_Stub(CMOCK_timer_CALLBACK Callback);
+#define timer_StubWithCallback timer_Stub
 
 #if defined(__GNUC__) && !defined(__ICC) && !defined(__TMS470__)
 #if __GNUC__ > 4 || (__GNUC__ == 4 && (__GNUC_MINOR__ > 6 || (__GNUC_MINOR__ == 6 && __GNUC_PATCHLEVEL__ > 0)))

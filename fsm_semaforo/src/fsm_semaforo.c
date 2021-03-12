@@ -1,9 +1,12 @@
 #include <stddef.h>
 
+#include "fsm.h"
 #include "fsm_semaforo.h"
 #include "fsm_semaforo_internal.h"
 
 #include "timer.h"
+#include "client.h"
+
 
 static int espiraObotonP(fsm_t *f)
 {
@@ -23,7 +26,7 @@ static int espiraObotonP(fsm_t *f)
 static int deadline(fsm_t *f)
 {
     fsm_semaforo_t *fp = (fsm_semaforo_t *)f;
-    return (timer() > fp->deadline);
+    return (fp->timer() > fp->deadline);
 };
 static int botonSoDeadline(fsm_t *f)
 {
@@ -31,7 +34,7 @@ static int botonSoDeadline(fsm_t *f)
 
     if (fp->botonS)
     {
-        if ((fp->botonS()) && (timer() < (fp->deadline) - 10))
+        if ((fp->botonS()) && (fp->timer() < (fp->deadline) - 10))
         {
             return 1;
         }
@@ -96,7 +99,7 @@ void output(fsm_semaforo_t *f, int X, int Y)
     f->s_verde = f->p_peaton;
     f->s_amarillo = X && Y;
     f->s_rojo = (X && (!Y)) || (!X && Y);
-    f->s_peaton = X && (!Y);
+    f->s_peaton = f->p_verde;
 };
 
 static fsm_trans_t semaforo_tt[] = {
@@ -110,8 +113,24 @@ static fsm_trans_t semaforo_tt[] = {
     {-1, NULL, -1, NULL}};
 
 void fsm_semaforo_init(fsm_semaforo_t *f, fsm_semaforo_espira_func_t espira, fsm_semaforo_botonP_func_t botonP, fsm_semaforo_botonS_func_t botonS,
-                       int p_verde, int p_amarillo, int p_rojo, int p_peaton, int s_verde, int s_amarillo, int s_rojo, int s_peaton, int deadline)
+fsm_semaforo_timer_func_t timer, int p_verde, int p_amarillo, int p_rojo, int p_peaton, int s_verde, int s_amarillo, int s_rojo, int s_peaton, int deadline)
 {
-
     fsm_init((fsm_t *)f, semaforo_tt);
+
+    f->espira = espira;
+    f->botonP = botonP;
+    f->botonS = botonS;
+    f->timer = timer;
+
+    f->p_verde = p_verde;
+    f->p_amarillo = p_amarillo;
+    f->p_rojo = p_rojo;
+    f->p_peaton = p_peaton;
+
+    f->s_verde = s_verde;
+    f->s_amarillo = s_amarillo;
+    f->s_rojo = s_rojo;
+    f->s_peaton = s_peaton;
+
+    f->deadline = deadline;
 }

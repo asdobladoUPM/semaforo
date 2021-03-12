@@ -1,0 +1,8 @@
+---
+- "/usr/local/bundle/gems/ceedling-0.30.0/vendor/unity/src/unity.h"
+- src/fsm.h
+- src/fsm_semaforo.h
+- src/fsm_semaforo_internal.h
+- build/test/mocks/mock_client.h
+- build/test/mocks/mock_timer.h
+- build/temp/_test_fsm_semaforo.c

@@ -1,9 +1,7 @@
-#ifndef FSM_semaforo_INTERNAL_H
-#define FSM_semaforo_INTERNAL_H
+#ifndef _FSM_semaforo_INTERNAL_H
+#define _FSM_semaforo_INTERNAL_H
 
-#include "fsm.h"
-
-enum {
+enum estados {
     P_VERDE,
     P_VERTOAM,
     P_AMARILLO,

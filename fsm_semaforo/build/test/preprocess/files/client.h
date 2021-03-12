@@ -4,6 +4,8 @@
 
 
 
-int custom_check(void);
+int espira(void);
 
-void custom_reset(void);
+int botonS(void);
+
+int botonP(void);

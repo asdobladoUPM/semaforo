@@ -4,8 +4,4 @@
 
 
 
-
-
-
-
-uint32_t timer_get_tick(void);
+int timer(void);

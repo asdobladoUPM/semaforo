@@ -7,3 +7,5 @@ src/fsm.c:
 - TEST
 src/fsm_rebound.c:
 - TEST
+src/fsm_semaforo.c:
+- TEST
