@@ -7,6 +7,10 @@ ltl dosverdesomg {
 ltl peatonP_cruza {
 [] (<> botonP) -> [] (<> p_peaton)
 }
+ltl peatonS_cruza {
+[] (<> botonS) -> [] (<> s_peaton)
+}
+
 /* Entradas */
 int espira;
 int botonP;
