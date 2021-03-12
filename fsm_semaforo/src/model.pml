@@ -1,5 +1,7 @@
 mtype = { P_Verde, P_VerToAm, P_Amarillo, S_Verde, S_VerToAm, S_Amarillo }
-
+ltl dosverdesomg {
+	[] !(p_verde && s_verde)
+}
 /* Entradas */
 int espira;
 int botonP;
