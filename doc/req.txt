@@ -6,4 +6,4 @@ La carretera secundaria tiene una espira que permite identificar cuándo hay coc
 Si un peatón quierre cruzar, tiene que presionar el botón correspondiente
 Un peatón no puede esperar indefinidamente para cruzar
 Un coche de la carretera secundaria no puede esperar indefinidamente para pasar
-a
+as
