@@ -3,9 +3,6 @@ mtype = { P_Verde, P_VerToAm, P_Amarillo, S_Verde, S_VerToAm, S_Amarillo }
 ltl dosverdes {
 	[] !(p_verde && s_verde)
 }
-ltl dosverdesmal {
-	[] (p_verde && s_verde)
-}
 ltl peatonP_cruza {
     [] botonP -> <> p_peaton
 }
