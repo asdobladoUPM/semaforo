@@ -3,7 +3,7 @@
 /*=======Automagically Detected Files To Include=====*/
 #include "unity.h"
 #include "cmock.h"
-#include "mock_client.h"
+#include "mock_actions.h"
 #include "mock_timer.h"
 
 int GlobalExpectCount;
@@ -28,17 +28,17 @@ static void CMock_Init(void)
   GlobalExpectCount = 0;
   GlobalVerifyOrder = 0;
   GlobalOrderError = NULL;
-  mock_client_Init();
+  mock_actions_Init();
   mock_timer_Init();
 }
 static void CMock_Verify(void)
 {
-  mock_client_Verify();
+  mock_actions_Verify();
   mock_timer_Verify();
 }
 static void CMock_Destroy(void)
 {
-  mock_client_Destroy();
+  mock_actions_Destroy();
   mock_timer_Destroy();
 }
 

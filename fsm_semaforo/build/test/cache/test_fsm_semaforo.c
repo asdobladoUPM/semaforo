@@ -1,6 +1,6 @@
 #include "build/temp/_test_fsm_semaforo.c"
 #include "build/test/mocks/mock_timer.h"
-#include "build/test/mocks/mock_client.h"
+#include "mock_actions.h"
 #include "src/fsm_semaforo_internal.h"
 #include "src/fsm_semaforo.h"
 #include "src/fsm.h"

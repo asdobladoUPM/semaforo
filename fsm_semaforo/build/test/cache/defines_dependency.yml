@@ -9,3 +9,5 @@ src/fsm_rebound.c:
 - TEST
 src/fsm_semaforo.c:
 - TEST
+build/test/mocks/mock_actions.c:
+- TEST

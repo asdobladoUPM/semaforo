@@ -3,6 +3,6 @@
 - src/fsm.h
 - src/fsm_semaforo.h
 - src/fsm_semaforo_internal.h
-- build/test/mocks/mock_client.h
+- mock_actions.h
 - build/test/mocks/mock_timer.h
 - build/temp/_test_fsm_semaforo.c
