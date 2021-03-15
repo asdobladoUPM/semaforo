@@ -1,0 +1,132 @@
+never noDosVerdes {    /* !([] (! ((p_verde) && (s_verde)))) */
+T0_init:
+	do
+	:: atomic { (! ((! ((p_verde) && (s_verde))))) -> assert(!(! ((! ((p_verde) && (s_verde)))))) }
+	:: (1) -> goto T0_init
+	od;
+accept_all:
+	skip
+}
+never peatonP_cruza {    /* !((! ([] (botonP))) || (<> (p_peaton))) */
+accept_init:
+T0_init:
+	do
+	:: (! ((p_peaton)) && (botonP)) -> goto T0_init
+	od;
+}
+never peatonS_cruza {    /* !((! ([] (botonS))) || (<> (s_peaton))) */
+accept_init:
+T0_init:
+	do
+	:: (! ((s_peaton)) && (botonS)) -> goto T0_init
+	od;
+}
+never espira {    /* !((! ([] (espira))) || (<> (s_verde))) */
+accept_init:
+T0_init:
+	do
+	:: (! ((s_verde)) && (espira)) -> goto T0_init
+	od;
+}
+never SrojoPeaton {    /* !([] ((s_rojo) && (s_peaton))) */
+T0_init:
+	do
+	:: atomic { (! (((s_rojo) && (s_peaton)))) -> assert(!(! (((s_rojo) && (s_peaton))))) }
+	:: (1) -> goto T0_init
+	od;
+accept_all:
+	skip
+}
+never ProjoPeaton {    /* !([] ((p_rojo) && (p_peaton))) */
+T0_init:
+	do
+	:: atomic { (! (((p_rojo) && (p_peaton)))) -> assert(!(! (((p_rojo) && (p_peaton))))) }
+	:: (1) -> goto T0_init
+	od;
+accept_all:
+	skip
+}
+never principalVtoA {    /* !(<> (([] (! (p_verde))) || ((! (p_verde)) U (p_amarillo)))) */
+T0_init:
+	do
+	:: (! ((! (p_verde))) && ! ((p_amarillo))) -> goto accept_S33
+	:: (! ((p_amarillo))) -> goto T0_init
+	od;
+accept_S33:
+	do
+	:: (! ((p_amarillo))) -> goto T0_init
+	od;
+}
+never principalAtoR {    /* !(<> (([] (! (p_amarillo))) || ((! (p_amarillo)) U (p_rojo)))) */
+T0_init:
+	do
+	:: (! ((! (p_amarillo))) && ! ((p_rojo))) -> goto accept_S33
+	:: (! ((p_rojo))) -> goto T0_init
+	od;
+accept_S33:
+	do
+	:: (! ((p_rojo))) -> goto T0_init
+	od;
+}
+never principalRtoV {    /* !(<> (([] (! (p_rojo))) || ((! (p_rojo)) U (p_verde)))) */
+T0_init:
+	do
+	:: (! ((! (p_rojo))) && ! ((p_verde))) -> goto accept_S33
+	:: (! ((p_verde))) -> goto T0_init
+	od;
+accept_S33:
+	do
+	:: (! ((p_verde))) -> goto T0_init
+	od;
+}
+never secundarioVtoA {    /* !(<> (([] (! (s_verde))) || ((! (s_verde)) U (s_amarillo)))) */
+T0_init:
+	do
+	:: (! ((! (s_verde))) && ! ((s_amarillo))) -> goto accept_S33
+	:: (! ((s_amarillo))) -> goto T0_init
+	od;
+accept_S33:
+	do
+	:: (! ((s_amarillo))) -> goto T0_init
+	od;
+}
+never secundarioAtoR {    /* !(<> (([] (! (s_amarillo))) || ((! (s_amarillo)) U (s_rojo)))) */
+T0_init:
+	do
+	:: (! ((! (s_amarillo))) && ! ((s_rojo))) -> goto accept_S33
+	:: (! ((s_rojo))) -> goto T0_init
+	od;
+accept_S33:
+	do
+	:: (! ((s_rojo))) -> goto T0_init
+	od;
+}
+never secundarioRtoV {    /* !(<> (([] (! (s_rojo))) || ((! (s_rojo)) U (s_verde)))) */
+T0_init:
+	do
+	:: (! ((! (s_rojo))) && ! ((s_verde))) -> goto accept_S33
+	:: (! ((s_verde))) -> goto T0_init
+	od;
+accept_S33:
+	do
+	:: (! ((s_verde))) -> goto T0_init
+	od;
+}
+never peatonPNoMuere {    /* !([] ((p_verde) && (! (p_peaton)))) */
+T0_init:
+	do
+	:: atomic { (! (((p_verde) && (! (p_peaton))))) -> assert(!(! (((p_verde) && (! (p_peaton)))))) }
+	:: (1) -> goto T0_init
+	od;
+accept_all:
+	skip
+}
+never peatonSNoMuere {    /* !([] ((s_verde) && (! (s_peaton)))) */
+T0_init:
+	do
+	:: atomic { (! (((s_verde) && (! (s_peaton))))) -> assert(!(! (((s_verde) && (! (s_peaton)))))) }
+	:: (1) -> goto T0_init
+	od;
+accept_all:
+	skip
+}
