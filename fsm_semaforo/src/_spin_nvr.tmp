@@ -1,0 +1,41 @@
+never dosverdesomg {    /* !([] (! ((p_verde) && (s_verde)))) */
+T0_init:
+	do
+	:: atomic { (! ((! ((p_verde) && (s_verde))))) -> assert(!(! ((! ((p_verde) && (s_verde)))))) }
+	:: (1) -> goto T0_init
+	od;
+accept_all:
+	skip
+}
+never peatonP_cruza {    /* !((! ([] (botonP))) || (<> (p_peaton))) */
+accept_init:
+T0_init:
+	do
+	:: (! ((p_peaton)) && (botonP)) -> goto T0_init
+	od;
+}
+never peatonS_cruza {    /* !((! ([] (botonS))) || (<> (s_peaton))) */
+accept_init:
+T0_init:
+	do
+	:: (! ((s_peaton)) && (botonS)) -> goto T0_init
+	od;
+}
+never espira {    /* !((! ([] (espira))) || (<> (s_verde))) */
+accept_init:
+T0_init:
+	do
+	:: (! ((s_verde)) && (espira)) -> goto T0_init
+	od;
+}
+never principal_verde {    /* !([] (<> (p_verde))) */
+T0_init:
+	do
+	:: (! ((p_verde))) -> goto accept_S4
+	:: (1) -> goto T0_init
+	od;
+accept_S4:
+	do
+	:: (! ((p_verde))) -> goto accept_S4
+	od;
+}
