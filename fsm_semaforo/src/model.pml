@@ -13,10 +13,10 @@ ltl espira {
     [] espira -> <> s_verde
 }
 ltl SrojoPeaton{
-    [] (s_rojo && s_peaton)
+    [] ((s_rojo && s_peaton)||(!s_rojo && !s_peaton))
 }
 ltl ProjoPeaton{
-    [] (p_rojo && p_peaton)
+    [] ((p_rojo && p_peaton)||(!p_rojo && !p_peaton))
 }
 ltl principalVtoA {
     <>(!p_verde W p_amarillo)
