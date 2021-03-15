@@ -1197,12 +1197,12 @@
 		if (!((now.estado==6)))
 			continue;
 		_m = 3; goto P999; /* 0 */
-	case 53: // STATE 6 - model.pml:48 - [((espira||botonP))] (72:0:3 - 1)
+	case 53: // STATE 6 - model.pml:48 - [((espira||botonP))] (71:0:3 - 1)
 		IfNotBlocked
 		reached[0][6] = 1;
 		if (!((now.espira||now.botonP)))
 			continue;
-		/* merge: espira = 0(72, 7, 72) */
+		/* merge: espira = 0(71, 7, 71) */
 		reached[0][7] = 1;
 		(trpt+1)->bup.ovals = grab_ints(3);
 		(trpt+1)->bup.ovals[0] = now.espira;
@@ -1211,7 +1211,7 @@
 		logval("espira", now.espira);
 #endif
 		;
-		/* merge: botonP = 0(72, 8, 72) */
+		/* merge: botonP = 0(71, 8, 71) */
 		reached[0][8] = 1;
 		(trpt+1)->bup.ovals[1] = now.botonP;
 		now.botonP = 0;
@@ -1219,7 +1219,7 @@
 		logval("botonP", now.botonP);
 #endif
 		;
-		/* merge: estado = P_VerToAm(72, 9, 72) */
+		/* merge: estado = P_VerToAm(71, 9, 71) */
 		reached[0][9] = 1;
 		(trpt+1)->bup.ovals[2] = now.estado;
 		now.estado = 5;
@@ -1227,11 +1227,11 @@
 		logval("estado", now.estado);
 #endif
 		;
-		/* merge: .(goto)(72, 11, 72) */
+		/* merge: .(goto)(71, 11, 71) */
 		reached[0][11] = 1;
 		;
-		/* merge: .(goto)(0, 71, 72) */
-		reached[0][71] = 1;
+		/* merge: .(goto)(0, 70, 71) */
+		reached[0][70] = 1;
 		;
 		_m = 3; goto P999; /* 5 */
 	case 54: // STATE 13 - model.pml:51 - [((estado==P_VerToAm))] (0:0:0 - 1)
@@ -1240,12 +1240,12 @@
 		if (!((now.estado==5)))
 			continue;
 		_m = 3; goto P999; /* 0 */
-	case 55: // STATE 14 - model.pml:53 - [(deadline)] (72:0:5 - 1)
+	case 55: // STATE 14 - model.pml:53 - [(deadline)] (71:0:5 - 1)
 		IfNotBlocked
 		reached[0][14] = 1;
 		if (!(now.deadline))
 			continue;
-		/* merge: deadline = 0(72, 15, 72) */
+		/* merge: deadline = 0(71, 15, 71) */
 		reached[0][15] = 1;
 		(trpt+1)->bup.ovals = grab_ints(5);
 		(trpt+1)->bup.ovals[0] = now.deadline;
@@ -1254,7 +1254,7 @@
 		logval("deadline", now.deadline);
 #endif
 		;
-		/* merge: p_verde = 0(72, 16, 72) */
+		/* merge: p_verde = 0(71, 16, 71) */
 		reached[0][16] = 1;
 		(trpt+1)->bup.ovals[1] = now.p_verde;
 		now.p_verde = 0;
@@ -1262,7 +1262,7 @@
 		logval("p_verde", now.p_verde);
 #endif
 		;
-		/* merge: p_amarillo = 1(72, 17, 72) */
+		/* merge: p_amarillo = 1(71, 17, 71) */
 		reached[0][17] = 1;
 		(trpt+1)->bup.ovals[2] = now.p_amarillo;
 		now.p_amarillo = 1;
@@ -1270,7 +1270,7 @@
 		logval("p_amarillo", now.p_amarillo);
 #endif
 		;
-		/* merge: s_peaton = 0(72, 18, 72) */
+		/* merge: s_peaton = 0(71, 18, 71) */
 		reached[0][18] = 1;
 		(trpt+1)->bup.ovals[3] = now.s_peaton;
 		now.s_peaton = 0;
@@ -1278,7 +1278,7 @@
 		logval("s_peaton", now.s_peaton);
 #endif
 		;
-		/* merge: estado = P_Amarillo(72, 19, 72) */
+		/* merge: estado = P_Amarillo(71, 19, 71) */
 		reached[0][19] = 1;
 		(trpt+1)->bup.ovals[4] = now.estado;
 		now.estado = 4;
@@ -1286,11 +1286,11 @@
 		logval("estado", now.estado);
 #endif
 		;
-		/* merge: .(goto)(72, 21, 72) */
+		/* merge: .(goto)(71, 21, 71) */
 		reached[0][21] = 1;
 		;
-		/* merge: .(goto)(0, 71, 72) */
-		reached[0][71] = 1;
+		/* merge: .(goto)(0, 70, 71) */
+		reached[0][70] = 1;
 		;
 		_m = 3; goto P999; /* 7 */
 	case 56: // STATE 23 - model.pml:56 - [((estado==P_Amarillo))] (0:0:0 - 1)
@@ -1299,12 +1299,12 @@
 		if (!((now.estado==4)))
 			continue;
 		_m = 3; goto P999; /* 0 */
-	case 57: // STATE 24 - model.pml:58 - [(deadline)] (72:0:7 - 1)
+	case 57: // STATE 24 - model.pml:58 - [(deadline)] (71:0:7 - 1)
 		IfNotBlocked
 		reached[0][24] = 1;
 		if (!(now.deadline))
 			continue;
-		/* merge: deadline = 0(72, 25, 72) */
+		/* merge: deadline = 0(71, 25, 71) */
 		reached[0][25] = 1;
 		(trpt+1)->bup.ovals = grab_ints(7);
 		(trpt+1)->bup.ovals[0] = now.deadline;
@@ -1313,7 +1313,7 @@
 		logval("deadline", now.deadline);
 #endif
 		;
-		/* merge: s_rojo = 0(72, 26, 72) */
+		/* merge: s_rojo = 0(71, 26, 71) */
 		reached[0][26] = 1;
 		(trpt+1)->bup.ovals[1] = now.s_rojo;
 		now.s_rojo = 0;
@@ -1321,7 +1321,7 @@
 		logval("s_rojo", now.s_rojo);
 #endif
 		;
-		/* merge: s_verde = 1(72, 27, 72) */
+		/* merge: s_verde = 1(71, 27, 71) */
 		reached[0][27] = 1;
 		(trpt+1)->bup.ovals[2] = now.s_verde;
 		now.s_verde = 1;
@@ -1329,7 +1329,7 @@
 		logval("s_verde", now.s_verde);
 #endif
 		;
-		/* merge: p_peaton = 1(72, 28, 72) */
+		/* merge: p_peaton = 1(71, 28, 71) */
 		reached[0][28] = 1;
 		(trpt+1)->bup.ovals[3] = now.p_peaton;
 		now.p_peaton = 1;
@@ -1337,7 +1337,7 @@
 		logval("p_peaton", now.p_peaton);
 #endif
 		;
-		/* merge: p_rojo = 1(72, 29, 72) */
+		/* merge: p_rojo = 1(71, 29, 71) */
 		reached[0][29] = 1;
 		(trpt+1)->bup.ovals[4] = now.p_rojo;
 		now.p_rojo = 1;
@@ -1345,7 +1345,7 @@
 		logval("p_rojo", now.p_rojo);
 #endif
 		;
-		/* merge: p_amarillo = 0(72, 30, 72) */
+		/* merge: p_amarillo = 0(71, 30, 71) */
 		reached[0][30] = 1;
 		(trpt+1)->bup.ovals[5] = now.p_amarillo;
 		now.p_amarillo = 0;
@@ -1353,7 +1353,7 @@
 		logval("p_amarillo", now.p_amarillo);
 #endif
 		;
-		/* merge: estado = S_Verde(72, 31, 72) */
+		/* merge: estado = S_Verde(71, 31, 71) */
 		reached[0][31] = 1;
 		(trpt+1)->bup.ovals[6] = now.estado;
 		now.estado = 3;
@@ -1361,11 +1361,11 @@
 		logval("estado", now.estado);
 #endif
 		;
-		/* merge: .(goto)(72, 33, 72) */
+		/* merge: .(goto)(71, 33, 71) */
 		reached[0][33] = 1;
 		;
-		/* merge: .(goto)(0, 71, 72) */
-		reached[0][71] = 1;
+		/* merge: .(goto)(0, 70, 71) */
+		reached[0][70] = 1;
 		;
 		_m = 3; goto P999; /* 9 */
 	case 58: // STATE 35 - model.pml:61 - [((estado==S_Verde))] (0:0:0 - 1)
@@ -1374,12 +1374,12 @@
 		if (!((now.estado==3)))
 			continue;
 		_m = 3; goto P999; /* 0 */
-	case 59: // STATE 36 - model.pml:63 - [(botonS)] (72:0:2 - 1)
+	case 59: // STATE 36 - model.pml:63 - [(botonS)] (71:0:2 - 1)
 		IfNotBlocked
 		reached[0][36] = 1;
 		if (!(now.botonS))
 			continue;
-		/* merge: botonS = 0(72, 37, 72) */
+		/* merge: botonS = 0(71, 37, 71) */
 		reached[0][37] = 1;
 		(trpt+1)->bup.ovals = grab_ints(2);
 		(trpt+1)->bup.ovals[0] = now.botonS;
@@ -1388,7 +1388,7 @@
 		logval("botonS", now.botonS);
 #endif
 		;
-		/* merge: estado = S_VerToAm(72, 38, 72) */
+		/* merge: estado = S_VerToAm(71, 38, 71) */
 		reached[0][38] = 1;
 		(trpt+1)->bup.ovals[1] = now.estado;
 		now.estado = 2;
@@ -1396,27 +1396,27 @@
 		logval("estado", now.estado);
 #endif
 		;
-		/* merge: .(goto)(72, 45, 72) */
+		/* merge: .(goto)(71, 45, 71) */
 		reached[0][45] = 1;
 		;
-		/* merge: .(goto)(0, 71, 72) */
-		reached[0][71] = 1;
+		/* merge: .(goto)(0, 70, 71) */
+		reached[0][70] = 1;
 		;
 		_m = 3; goto P999; /* 4 */
-	case 60: // STATE 45 - model.pml:66 - [.(goto)] (0:72:0 - 2)
+	case 60: // STATE 45 - model.pml:66 - [.(goto)] (0:71:0 - 2)
 		IfNotBlocked
 		reached[0][45] = 1;
 		;
-		/* merge: .(goto)(0, 71, 72) */
-		reached[0][71] = 1;
+		/* merge: .(goto)(0, 70, 71) */
+		reached[0][70] = 1;
 		;
 		_m = 3; goto P999; /* 1 */
-	case 61: // STATE 39 - model.pml:64 - [(deadline)] (72:0:4 - 1)
+	case 61: // STATE 39 - model.pml:64 - [(deadline)] (71:0:4 - 1)
 		IfNotBlocked
 		reached[0][39] = 1;
 		if (!(now.deadline))
 			continue;
-		/* merge: deadline = 0(72, 40, 72) */
+		/* merge: deadline = 0(71, 40, 71) */
 		reached[0][40] = 1;
 		(trpt+1)->bup.ovals = grab_ints(4);
 		(trpt+1)->bup.ovals[0] = now.deadline;
@@ -1425,7 +1425,7 @@
 		logval("deadline", now.deadline);
 #endif
 		;
-		/* merge: estado = S_Amarillo(72, 41, 72) */
+		/* merge: estado = S_Amarillo(71, 41, 71) */
 		reached[0][41] = 1;
 		(trpt+1)->bup.ovals[1] = now.estado;
 		now.estado = 1;
@@ -1433,7 +1433,7 @@
 		logval("estado", now.estado);
 #endif
 		;
-		/* merge: s_verde = 0(72, 42, 72) */
+		/* merge: s_verde = 0(71, 42, 71) */
 		reached[0][42] = 1;
 		(trpt+1)->bup.ovals[2] = now.s_verde;
 		now.s_verde = 0;
@@ -1441,7 +1441,7 @@
 		logval("s_verde", now.s_verde);
 #endif
 		;
-		/* merge: s_amarillo = 1(72, 43, 72) */
+		/* merge: s_amarillo = 1(71, 43, 71) */
 		reached[0][43] = 1;
 		(trpt+1)->bup.ovals[3] = now.s_amarillo;
 		now.s_amarillo = 1;
@@ -1449,11 +1449,11 @@
 		logval("s_amarillo", now.s_amarillo);
 #endif
 		;
-		/* merge: .(goto)(72, 45, 72) */
+		/* merge: .(goto)(71, 45, 71) */
 		reached[0][45] = 1;
 		;
-		/* merge: .(goto)(0, 71, 72) */
-		reached[0][71] = 1;
+		/* merge: .(goto)(0, 70, 71) */
+		reached[0][70] = 1;
 		;
 		_m = 3; goto P999; /* 6 */
 	case 62: // STATE 47 - model.pml:67 - [((estado==S_VerToAm))] (0:0:0 - 1)
@@ -1462,21 +1462,21 @@
 		if (!((now.estado==2)))
 			continue;
 		_m = 3; goto P999; /* 0 */
-	case 63: // STATE 48 - model.pml:69 - [(deadline)] (72:0:6 - 1)
+	case 63: // STATE 48 - model.pml:69 - [(deadline)] (71:0:5 - 1)
 		IfNotBlocked
 		reached[0][48] = 1;
 		if (!(now.deadline))
 			continue;
-		/* merge: deadline = 0(72, 49, 72) */
+		/* merge: deadline = 0(71, 49, 71) */
 		reached[0][49] = 1;
-		(trpt+1)->bup.ovals = grab_ints(6);
+		(trpt+1)->bup.ovals = grab_ints(5);
 		(trpt+1)->bup.ovals[0] = now.deadline;
 		now.deadline = 0;
 #ifdef VAR_RANGES
 		logval("deadline", now.deadline);
 #endif
 		;
-		/* merge: estado = S_Amarillo(72, 50, 72) */
+		/* merge: estado = S_Amarillo(71, 50, 71) */
 		reached[0][50] = 1;
 		(trpt+1)->bup.ovals[1] = now.estado;
 		now.estado = 1;
@@ -1484,7 +1484,7 @@
 		logval("estado", now.estado);
 #endif
 		;
-		/* merge: p_peaton = 0(72, 51, 72) */
+		/* merge: p_peaton = 0(71, 51, 71) */
 		reached[0][51] = 1;
 		(trpt+1)->bup.ovals[2] = now.p_peaton;
 		now.p_peaton = 0;
@@ -1492,7 +1492,7 @@
 		logval("p_peaton", now.p_peaton);
 #endif
 		;
-		/* merge: s_verde = 0(72, 52, 72) */
+		/* merge: s_verde = 0(71, 52, 71) */
 		reached[0][52] = 1;
 		(trpt+1)->bup.ovals[3] = now.s_verde;
 		now.s_verde = 0;
@@ -1500,42 +1500,34 @@
 		logval("s_verde", now.s_verde);
 #endif
 		;
-		/* merge: p_verde = 0(72, 53, 72) */
+		/* merge: s_amarillo = 1(71, 53, 71) */
 		reached[0][53] = 1;
-		(trpt+1)->bup.ovals[4] = now.p_verde;
-		now.p_verde = 0;
-#ifdef VAR_RANGES
-		logval("p_verde", now.p_verde);
-#endif
-		;
-		/* merge: s_amarillo = 1(72, 54, 72) */
-		reached[0][54] = 1;
-		(trpt+1)->bup.ovals[5] = now.s_amarillo;
+		(trpt+1)->bup.ovals[4] = now.s_amarillo;
 		now.s_amarillo = 1;
 #ifdef VAR_RANGES
 		logval("s_amarillo", now.s_amarillo);
 #endif
 		;
-		/* merge: .(goto)(72, 56, 72) */
-		reached[0][56] = 1;
+		/* merge: .(goto)(71, 55, 71) */
+		reached[0][55] = 1;
 		;
-		/* merge: .(goto)(0, 71, 72) */
-		reached[0][71] = 1;
+		/* merge: .(goto)(0, 70, 71) */
+		reached[0][70] = 1;
 		;
-		_m = 3; goto P999; /* 8 */
-	case 64: // STATE 58 - model.pml:72 - [((estado==S_Amarillo))] (0:0:0 - 1)
+		_m = 3; goto P999; /* 7 */
+	case 64: // STATE 57 - model.pml:72 - [((estado==S_Amarillo))] (0:0:0 - 1)
 		IfNotBlocked
-		reached[0][58] = 1;
+		reached[0][57] = 1;
 		if (!((now.estado==1)))
 			continue;
 		_m = 3; goto P999; /* 0 */
-	case 65: // STATE 59 - model.pml:74 - [(deadline)] (72:0:7 - 1)
+	case 65: // STATE 58 - model.pml:74 - [(deadline)] (71:0:7 - 1)
 		IfNotBlocked
-		reached[0][59] = 1;
+		reached[0][58] = 1;
 		if (!(now.deadline))
 			continue;
-		/* merge: deadline = 0(72, 60, 72) */
-		reached[0][60] = 1;
+		/* merge: deadline = 0(71, 59, 71) */
+		reached[0][59] = 1;
 		(trpt+1)->bup.ovals = grab_ints(7);
 		(trpt+1)->bup.ovals[0] = now.deadline;
 		now.deadline = 0;
@@ -1543,69 +1535,69 @@
 		logval("deadline", now.deadline);
 #endif
 		;
-		/* merge: estado = P_Verde(72, 61, 72) */
-		reached[0][61] = 1;
+		/* merge: estado = P_Verde(71, 60, 71) */
+		reached[0][60] = 1;
 		(trpt+1)->bup.ovals[1] = now.estado;
 		now.estado = 6;
 #ifdef VAR_RANGES
 		logval("estado", now.estado);
 #endif
 		;
-		/* merge: s_rojo = 1(72, 62, 72) */
-		reached[0][62] = 1;
+		/* merge: s_rojo = 1(71, 61, 71) */
+		reached[0][61] = 1;
 		(trpt+1)->bup.ovals[2] = now.s_rojo;
 		now.s_rojo = 1;
 #ifdef VAR_RANGES
 		logval("s_rojo", now.s_rojo);
 #endif
 		;
-		/* merge: s_peaton = 1(72, 63, 72) */
-		reached[0][63] = 1;
+		/* merge: s_peaton = 1(71, 62, 71) */
+		reached[0][62] = 1;
 		(trpt+1)->bup.ovals[3] = now.s_peaton;
 		now.s_peaton = 1;
 #ifdef VAR_RANGES
 		logval("s_peaton", now.s_peaton);
 #endif
 		;
-		/* merge: s_amarillo = 0(72, 64, 72) */
-		reached[0][64] = 1;
+		/* merge: s_amarillo = 0(71, 63, 71) */
+		reached[0][63] = 1;
 		(trpt+1)->bup.ovals[4] = now.s_amarillo;
 		now.s_amarillo = 0;
 #ifdef VAR_RANGES
 		logval("s_amarillo", now.s_amarillo);
 #endif
 		;
-		/* merge: p_rojo = 0(72, 65, 72) */
-		reached[0][65] = 1;
+		/* merge: p_rojo = 0(71, 64, 71) */
+		reached[0][64] = 1;
 		(trpt+1)->bup.ovals[5] = now.p_rojo;
 		now.p_rojo = 0;
 #ifdef VAR_RANGES
 		logval("p_rojo", now.p_rojo);
 #endif
 		;
-		/* merge: p_verde = 1(72, 66, 72) */
-		reached[0][66] = 1;
+		/* merge: p_verde = 1(71, 65, 71) */
+		reached[0][65] = 1;
 		(trpt+1)->bup.ovals[6] = now.p_verde;
 		now.p_verde = 1;
 #ifdef VAR_RANGES
 		logval("p_verde", now.p_verde);
 #endif
 		;
-		/* merge: .(goto)(72, 68, 72) */
-		reached[0][68] = 1;
+		/* merge: .(goto)(71, 67, 71) */
+		reached[0][67] = 1;
 		;
-		/* merge: .(goto)(0, 71, 72) */
-		reached[0][71] = 1;
+		/* merge: .(goto)(0, 70, 71) */
+		reached[0][70] = 1;
 		;
 		_m = 3; goto P999; /* 9 */
-	case 66: // STATE 72 - model.pml:78 - [printf('estado = %d, principal (r,a,v, peaton) = (%d, %d, %d, %d), secundario (r,a,v, peaton) = (%d, %d, %d, %d)\\n',estado,p_rojo,p_amarillo,p_verde,p_peaton,s_rojo,s_amarillo,s_verde,s_peaton)] (0:0:0 - 7)
+	case 66: // STATE 71 - model.pml:78 - [printf('estado = %d, principal (r,a,v, peaton) = (%d, %d, %d, %d), secundario (r,a,v, peaton) = (%d, %d, %d, %d)\\n',estado,p_rojo,p_amarillo,p_verde,p_peaton,s_rojo,s_amarillo,s_verde,s_peaton)] (0:0:0 - 7)
 		IfNotBlocked
-		reached[0][72] = 1;
+		reached[0][71] = 1;
 		Printf("estado = %d, principal (r,a,v, peaton) = (%d, %d, %d, %d), secundario (r,a,v, peaton) = (%d, %d, %d, %d)\n", now.estado, now.p_rojo, now.p_amarillo, now.p_verde, now.p_peaton, now.s_rojo, now.s_amarillo, now.s_verde, now.s_peaton);
 		_m = 3; goto P999; /* 0 */
-	case 67: // STATE 76 - model.pml:81 - [-end-] (0:0:0 - 1)
+	case 67: // STATE 75 - model.pml:81 - [-end-] (0:0:0 - 1)
 		IfNotBlocked
-		reached[0][76] = 1;
+		reached[0][75] = 1;
 		if (!delproc(1, II)) continue;
 		_m = 3; goto P999; /* 0 */
 	case  _T5:	/* np_ */

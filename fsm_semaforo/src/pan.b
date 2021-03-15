@@ -314,21 +314,20 @@
 ;
 		;
 		
-	case 63: // STATE 54
+	case 63: // STATE 53
 		;
-		now.s_amarillo = trpt->bup.ovals[5];
-		now.p_verde = trpt->bup.ovals[4];
+		now.s_amarillo = trpt->bup.ovals[4];
 		now.s_verde = trpt->bup.ovals[3];
 		now.p_peaton = trpt->bup.ovals[2];
 		now.estado = trpt->bup.ovals[1];
 		now.deadline = trpt->bup.ovals[0];
 		;
-		ungrab_ints(trpt->bup.ovals, 6);
+		ungrab_ints(trpt->bup.ovals, 5);
 		goto R999;
 ;
 		;
 		
-	case 65: // STATE 66
+	case 65: // STATE 65
 		;
 		now.p_verde = trpt->bup.ovals[6];
 		now.p_rojo = trpt->bup.ovals[5];
@@ -343,7 +342,7 @@
 ;
 		;
 		
-	case 67: // STATE 76
+	case 67: // STATE 75
 		;
 		p_restor(II);
 		;
