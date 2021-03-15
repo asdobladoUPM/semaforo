@@ -3,6 +3,10 @@ mtype = { P_Verde, P_VerToAm, P_Amarillo, S_Verde, S_VerToAm, S_Amarillo }
 ltl noDosVerdes {
 	[] !(p_verde && s_verde)
 }
+ltl algunoRojo{
+    [] (p_rojo || s_rojo)
+}
+
 ltl peatonP_cruza {
     [] botonP -> <> p_peaton
 }
@@ -12,22 +16,22 @@ ltl peatonS_cruza {
 ltl espira {
     [] espira -> <> s_verde
 }
+
 ltl SrojoPeaton{
     [] ((s_rojo && s_peaton)||(!s_rojo && !s_peaton))
 }
 ltl ProjoPeaton{
     [] ((p_rojo && p_peaton)||(!p_rojo && !p_peaton))
 }
+
 ltl peatonPNoMuere{
     [] !(p_verde && p_peaton)
 }
 ltl peatonSNoMuere{
     [] !(s_verde && s_peaton)
 }
-ltl algunoRojo{
-    [] (p_rojo || s_rojo)
-}
 
+//Comprobarcion de patrones
 ltl principalAmarillo {
     [](p_verde & !p_rojo -> (!p_rojo W (p_amarillo & !p_rojo)))
 }
