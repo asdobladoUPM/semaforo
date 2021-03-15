@@ -1,6 +1,6 @@
 mtype = { P_Verde, P_VerToAm, P_Amarillo, S_Verde, S_VerToAm, S_Amarillo }
 
-ltl dosverdes {
+ltl noDosVerdes {
 	[] !(p_verde && s_verde)
 }
 ltl peatonP_cruza {
@@ -15,6 +15,13 @@ ltl espira {
 ltl principal_verde{
     [] (<> (p_verde))
 }
+ltl peatonPNoMuere{
+    [] (p_verde && !p_peaton)
+}
+ltl peatonSNoMuere{
+    [] (s_verde && !s_peaton)
+}
+
 
 
 /* Entradas */
