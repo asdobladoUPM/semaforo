@@ -62,15 +62,11 @@ int s_amarillo;
 int s_rojo=1;
 int s_peaton=1;
 
-int estado;
+int estado=P_Verde;
 int deadline;
 
 active proctype fsm () 
 {
-    estado = P_Verde;
-    p_verde = 1;
-    s_rojo = 1;
-    s_peaton = 1;
     do
         ::if
             :: (estado == P_Verde) -> atomic {
