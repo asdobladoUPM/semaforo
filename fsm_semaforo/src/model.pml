@@ -52,15 +52,15 @@ int botonP;
 int botonS;
 
 /* Salidas */
-int p_verde;
+int p_verde=1;
 int p_amarillo;
 int p_rojo;
 int p_peaton;
 
 int s_verde;
 int s_amarillo;
-int s_rojo;
-int s_peaton;
+int s_rojo=1;
+int s_peaton=1;
 
 int estado;
 int deadline;
