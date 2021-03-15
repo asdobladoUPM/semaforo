@@ -1,7 +1,7 @@
 mtype = { P_Verde, P_VerToAm, P_Amarillo, S_Verde, S_VerToAm, S_Amarillo }
 
 ltl noDosVerdes {
-	[] !(p_verde & s_verde)
+	[] !(p_verde && s_verde)
 }
 ltl peatonP_cruza {
     [] botonP -> <> p_peaton
@@ -13,10 +13,10 @@ ltl espira {
     [] espira -> <> s_verde
 }
 ltl SrojoPeaton{
-    [] (s_rojo & s_peaton)
+    [] (s_rojo && s_peaton)
 }
 ltl ProjoPeaton{
-    [] (p_rojo & p_peaton)
+    [] (p_rojo && p_peaton)
 }
 ltl principalVtoA {
     <>(!p_verde W p_amarillo)
@@ -37,13 +37,13 @@ ltl secundarioRtoV {
     <>(!s_rojo W s_verde)
 }
 ltl peatonPNoMuere{
-    [] !(p_verde & p_peaton)
+    [] !(p_verde && p_peaton)
 }
 ltl peatonSNoMuere{
-    [] !(s_verde & s_peaton)
+    [] !(s_verde && s_peaton)
 }
 ltl algunoRojo{
-    [] (p_rojo | s_rojo)
+    [] (p_rojo || s_rojo)
 }
 
 /* Entradas */
@@ -52,25 +52,21 @@ int botonP;
 int botonS;
 
 /* Salidas */
-int p_verde;
+int p_verde=1;
 int p_amarillo;
 int p_rojo;
 int p_peaton;
 
 int s_verde;
 int s_amarillo;
-int s_rojo;
-int s_peaton;
+int s_rojo=1;
+int s_peaton=1;
 
-int estado;
+int estado=P_Verde;
 int deadline;
 
 active proctype fsm () 
 {
-    estado = P_Verde;
-    p_verde = 1;
-    s_rojo = 1;
-    s_peaton = 1;
     do
         ::if
             :: (estado == P_Verde) -> atomic {
