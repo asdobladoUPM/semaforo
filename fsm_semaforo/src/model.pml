@@ -12,26 +12,30 @@ ltl peatonS_cruza {
 ltl espira {
     [] espira -> <> s_verde
 }
-/*ltl principalVtoA {
-    !p_verde W p_amarillo
+ltl SrojoPeaton{
+    [] (s_rojo && s_peaton)
 }
-<<<<<<< HEAD
+ltl ProjoPeaton{
+    [] (p_rojo && p_peaton)
+}
+ltl principalVtoA {
+    <>(!p_verde W p_amarillo)
+}
 ltl principalAtoR {
-    !p_amarillo W p_rojo
+    <>(!p_amarillo W p_rojo)
 }
 ltl principalRtoV {
-    !p_rojo W p_verde
+    <>(!p_rojo W p_verde)
 }
 ltl secundarioVtoA {
-    !s_verde W s_amarillo
+    <>(!s_verde W s_amarillo)
 }
 ltl secundarioAtoR {
-    !s_amarillo W s_rojo
+    <>(!s_amarillo W s_rojo)
 }
 ltl secundarioRtoV {
-    !s_rojo W s_verde
-}*/
-
+    <>(!s_rojo W s_verde)
+}
 ltl peatonPNoMuere{
     [] (p_verde && !p_peaton)
 }
@@ -100,7 +104,7 @@ active proctype fsm ()
             }
         fi;
         printf ("estado = %d, principal (r,a,v, peaton) = (%d, %d, %d, %d), secundario (r,a,v, peaton) = (%d, %d, %d, %d)\n",
-                estado, p_verde, p_amarillo, p_rojo, p_peaton, s_verde, s_amarillo, s_rojo, s_peaton);
+                estado, p_rojo, p_amarillo, p_verde, p_peaton, s_rojo, s_amarillo, s_verde, s_peaton);
     od
 }
 

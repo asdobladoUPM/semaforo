@@ -73,6 +73,22 @@ globinit(void)
 #endif
 	*proc_offset, *q_offset;
 void
+locinit15(int h)
+{
+}
+void
+locinit14(int h)
+{
+}
+void
+locinit13(int h)
+{
+}
+void
+locinit12(int h)
+{
+}
+void
 locinit11(int h)
 {
 }
@@ -526,119 +542,135 @@ int _;	/* predefined write-only variable */
 	#define Index(x, y)	x
 #endif
 
-short src_ln11 [] = {
-	  0, 163, 163, 164, 164, 164, 165, 165, 
-	166, 166, 162, 168, 162, 170, 170, 171, 
-	171, 171, 169, 173, 169, 175, 175, 175, 
-	176, 176, 174, 178, 174, 180, 180, 180, 
-	181, 181, 179, 183, 179, 184, 185,   0, };
-S_F_MAP src_file11 [] = {
+short src_ln15 [] = {
+	  0, 126, 126, 126, 127, 127, 125, 129, 
+	125, 130, 131,   0, };
+S_F_MAP src_file15 [] = {
 	{ "-", 0, 0 },
-	{ "_spin_nvr.tmp", 1, 38 },
-	{ "-", 39, 40 }
+	{ "_spin_nvr.tmp", 1, 10 },
+	{ "-", 11, 12 }
 };
 short *src_claim;
-uchar reached11 [] = {
-	  0,   1,   1,   1,   0,   1,   1,   1, 
-	  1,   1,   0,   1,   1,   1,   1,   1, 
+uchar reached15 [] = {
 	  0,   1,   0,   1,   1,   1,   0,   1, 
-	  1,   1,   0,   1,   1,   1,   0,   1, 
-	  1,   1,   0,   1,   1,   1,   0,   0, };
+	  1,   1,   0,   0, };
+uchar *loopstate15;
+
+short src_ln14 [] = {
+	  0, 117, 117, 117, 118, 118, 116, 120, 
+	116, 121, 122,   0, };
+S_F_MAP src_file14 [] = {
+	{ "-", 0, 0 },
+	{ "_spin_nvr.tmp", 1, 10 },
+	{ "-", 11, 12 }
+};
+uchar reached14 [] = {
+	  0,   1,   0,   1,   1,   1,   0,   1, 
+	  1,   1,   0,   0, };
+uchar *loopstate14;
+
+short src_ln13 [] = {
+	  0, 106, 106, 107, 107, 105, 109, 105, 
+	111, 111, 110, 113, 110, 113,   0, };
+S_F_MAP src_file13 [] = {
+	{ "-", 0, 0 },
+	{ "_spin_nvr.tmp", 1, 13 },
+	{ "-", 14, 15 }
+};
+uchar reached13 [] = {
+	  0,   1,   1,   1,   1,   0,   1,   1, 
+	  1,   1,   0,   1,   1,   0,   0, };
+uchar *loopstate13;
+
+short src_ln12 [] = {
+	  0,  95,  95,  96,  96,  94,  98,  94, 
+	100, 100,  99, 102,  99, 102,   0, };
+S_F_MAP src_file12 [] = {
+	{ "-", 0, 0 },
+	{ "_spin_nvr.tmp", 1, 13 },
+	{ "-", 14, 15 }
+};
+uchar reached12 [] = {
+	  0,   1,   1,   1,   1,   0,   1,   1, 
+	  1,   1,   0,   1,   1,   0,   0, };
+uchar *loopstate12;
+
+short src_ln11 [] = {
+	  0,  84,  84,  85,  85,  83,  87,  83, 
+	 89,  89,  88,  91,  88,  91,   0, };
+S_F_MAP src_file11 [] = {
+	{ "-", 0, 0 },
+	{ "_spin_nvr.tmp", 1, 13 },
+	{ "-", 14, 15 }
+};
+uchar reached11 [] = {
+	  0,   1,   1,   1,   1,   0,   1,   1, 
+	  1,   1,   0,   1,   1,   0,   0, };
 uchar *loopstate11;
 
 short src_ln10 [] = {
-	  0, 137, 137, 138, 138, 138, 139, 139, 
-	140, 140, 136, 142, 136, 144, 144, 145, 
-	145, 145, 143, 147, 143, 149, 149, 149, 
-	150, 150, 148, 152, 148, 154, 154, 154, 
-	155, 155, 153, 157, 153, 158, 159,   0, };
+	  0,  73,  73,  74,  74,  72,  76,  72, 
+	 78,  78,  77,  80,  77,  80,   0, };
 S_F_MAP src_file10 [] = {
 	{ "-", 0, 0 },
-	{ "_spin_nvr.tmp", 1, 38 },
-	{ "-", 39, 40 }
+	{ "_spin_nvr.tmp", 1, 13 },
+	{ "-", 14, 15 }
 };
 uchar reached10 [] = {
-	  0,   1,   1,   1,   0,   1,   1,   1, 
-	  1,   1,   0,   1,   1,   1,   1,   1, 
-	  0,   1,   0,   1,   1,   1,   0,   1, 
-	  1,   1,   0,   1,   1,   1,   0,   1, 
-	  1,   1,   0,   1,   1,   1,   0,   0, };
+	  0,   1,   1,   1,   1,   0,   1,   1, 
+	  1,   1,   0,   1,   1,   0,   0, };
 uchar *loopstate10;
 
 short src_ln9 [] = {
-	  0, 111, 111, 112, 112, 112, 113, 113, 
-	114, 114, 110, 116, 110, 118, 118, 119, 
-	119, 119, 117, 121, 117, 123, 123, 123, 
-	124, 124, 122, 126, 122, 128, 128, 128, 
-	129, 129, 127, 131, 127, 132, 133,   0, };
+	  0,  62,  62,  63,  63,  61,  65,  61, 
+	 67,  67,  66,  69,  66,  69,   0, };
 S_F_MAP src_file9 [] = {
 	{ "-", 0, 0 },
-	{ "_spin_nvr.tmp", 1, 38 },
-	{ "-", 39, 40 }
+	{ "_spin_nvr.tmp", 1, 13 },
+	{ "-", 14, 15 }
 };
 uchar reached9 [] = {
-	  0,   1,   1,   1,   0,   1,   1,   1, 
-	  1,   1,   0,   1,   1,   1,   1,   1, 
-	  0,   1,   0,   1,   1,   1,   0,   1, 
-	  1,   1,   0,   1,   1,   1,   0,   1, 
-	  1,   1,   0,   1,   1,   1,   0,   0, };
+	  0,   1,   1,   1,   1,   0,   1,   1, 
+	  1,   1,   0,   1,   1,   0,   0, };
 uchar *loopstate9;
 
 short src_ln8 [] = {
-	  0,  85,  85,  86,  86,  86,  87,  87, 
-	 88,  88,  84,  90,  84,  92,  92,  93, 
-	 93,  93,  91,  95,  91,  97,  97,  97, 
-	 98,  98,  96, 100,  96, 102, 102, 102, 
-	103, 103, 101, 105, 101, 106, 107,   0, };
+	  0,  51,  51,  52,  52,  50,  54,  50, 
+	 56,  56,  55,  58,  55,  58,   0, };
 S_F_MAP src_file8 [] = {
 	{ "-", 0, 0 },
-	{ "_spin_nvr.tmp", 1, 38 },
-	{ "-", 39, 40 }
+	{ "_spin_nvr.tmp", 1, 13 },
+	{ "-", 14, 15 }
 };
 uchar reached8 [] = {
-	  0,   1,   1,   1,   0,   1,   1,   1, 
-	  1,   1,   0,   1,   1,   1,   1,   1, 
-	  0,   1,   0,   1,   1,   1,   0,   1, 
-	  1,   1,   0,   1,   1,   1,   0,   1, 
-	  1,   1,   0,   1,   1,   1,   0,   0, };
+	  0,   1,   1,   1,   1,   0,   1,   1, 
+	  1,   1,   0,   1,   1,   0,   0, };
 uchar *loopstate8;
 
 short src_ln7 [] = {
-	  0,  59,  59,  60,  60,  60,  61,  61, 
-	 62,  62,  58,  64,  58,  66,  66,  67, 
-	 67,  67,  65,  69,  65,  71,  71,  71, 
-	 72,  72,  70,  74,  70,  76,  76,  76, 
-	 77,  77,  75,  79,  75,  80,  81,   0, };
+	  0,  42,  42,  42,  43,  43,  41,  45, 
+	 41,  46,  47,   0, };
 S_F_MAP src_file7 [] = {
 	{ "-", 0, 0 },
-	{ "_spin_nvr.tmp", 1, 38 },
-	{ "-", 39, 40 }
+	{ "_spin_nvr.tmp", 1, 10 },
+	{ "-", 11, 12 }
 };
 uchar reached7 [] = {
-	  0,   1,   1,   1,   0,   1,   1,   1, 
-	  1,   1,   0,   1,   1,   1,   1,   1, 
 	  0,   1,   0,   1,   1,   1,   0,   1, 
-	  1,   1,   0,   1,   1,   1,   0,   1, 
-	  1,   1,   0,   1,   1,   1,   0,   0, };
+	  1,   1,   0,   0, };
 uchar *loopstate7;
 
 short src_ln6 [] = {
-	  0,  33,  33,  34,  34,  34,  35,  35, 
-	 36,  36,  32,  38,  32,  40,  40,  41, 
-	 41,  41,  39,  43,  39,  45,  45,  45, 
-	 46,  46,  44,  48,  44,  50,  50,  50, 
-	 51,  51,  49,  53,  49,  54,  55,   0, };
+	  0,  33,  33,  33,  34,  34,  32,  36, 
+	 32,  37,  38,   0, };
 S_F_MAP src_file6 [] = {
 	{ "-", 0, 0 },
-	{ "_spin_nvr.tmp", 1, 38 },
-	{ "-", 39, 40 }
+	{ "_spin_nvr.tmp", 1, 10 },
+	{ "-", 11, 12 }
 };
 uchar reached6 [] = {
-	  0,   1,   1,   1,   0,   1,   1,   1, 
-	  1,   1,   0,   1,   1,   1,   1,   1, 
 	  0,   1,   0,   1,   1,   1,   0,   1, 
-	  1,   1,   0,   1,   1,   1,   0,   1, 
-	  1,   1,   0,   1,   1,   1,   0,   0, };
+	  1,   1,   0,   0, };
 uchar *loopstate6;
 
 short src_ln5 [] = {
@@ -688,8 +720,8 @@ uchar reached2 [] = {
 uchar *loopstate2;
 
 short src_ln1 [] = {
-	  0,  82,  82,  83,  84,  85,  86,  81, 
-	 88,  80,  89,  80,  89,   0, };
+	  0,  87,  87,  88,  89,  90,  91,  86, 
+	 93,  85,  94,  85,  94,   0, };
 S_F_MAP src_file1 [] = {
 	{ "-", 0, 0 },
 	{ "model.pml", 1, 12 },
@@ -701,16 +733,16 @@ uchar reached1 [] = {
 uchar *loopstate1;
 
 short src_ln0 [] = {
-	  0,  35,  36,  37,  38,  41,  43,  43, 
-	 43,  43,  42,  45,  41,  46,  48,  48, 
-	 48,  48,  48,  48,  47,  50,  46,  51, 
-	 53,  53,  53,  53,  53,  53,  53,  53, 
-	 52,  55,  51,  56,  58,  58,  58,  59, 
-	 59,  59,  59,  59,  57,  61,  56,  62, 
-	 64,  64,  64,  64,  64,  64,  64,  63, 
-	 66,  62,  67,  69,  69,  69,  69,  69, 
-	 69,  69,  69,  68,  71,  67,  40,  73, 
-	 73,  39,  76,  39,  76,   0, };
+	  0,  40,  41,  42,  43,  46,  48,  48, 
+	 48,  48,  47,  50,  46,  51,  53,  53, 
+	 53,  53,  53,  53,  52,  55,  51,  56, 
+	 58,  58,  58,  58,  58,  58,  58,  58, 
+	 57,  60,  56,  61,  63,  63,  63,  64, 
+	 64,  64,  64,  64,  62,  66,  61,  67, 
+	 69,  69,  69,  69,  69,  69,  69,  68, 
+	 71,  67,  72,  74,  74,  74,  74,  74, 
+	 74,  74,  74,  73,  76,  72,  45,  78, 
+	 78,  44,  81,  44,  81,   0, };
 S_F_MAP src_file0 [] = {
 	{ "-", 0, 0 },
 	{ "model.pml", 1, 76 },
@@ -728,11 +760,15 @@ uchar reached0 [] = {
 	  0,   0,   0,   1,   1,   0,   1,   1, 
 	  0,   0,   1,   1,   0,   0, };
 uchar *loopstate0;
-uchar reached12[3];  /* np_ */
-uchar *loopstate12;  /* np_ */
+uchar reached16[3];  /* np_ */
+uchar *loopstate16;  /* np_ */
 struct {
 	int tp; short *src;
 } src_all[] = {
+	{ 15, &src_ln15[0] },
+	{ 14, &src_ln14[0] },
+	{ 13, &src_ln13[0] },
+	{ 12, &src_ln12[0] },
 	{ 11, &src_ln11[0] },
 	{ 10, &src_ln10[0] },
 	{ 9, &src_ln9[0] },
@@ -748,6 +784,10 @@ struct {
 	{ 0, (short *) 0 }
 };
 S_F_MAP *flref[] = {
+	src_file15,
+	src_file14,
+	src_file13,
+	src_file12,
 	src_file11,
 	src_file10,
 	src_file9,
@@ -768,24 +808,28 @@ struct {
 	{ (char *) 0, "" }
 };
 
-short Air[] = {  (short) Air0, (short) Air1, (short) Air2, (short) Air3, (short) Air4, (short) Air5, (short) Air6, (short) Air7, (short) Air8, (short) Air9, (short) Air10, (short) Air11, (short) Air12
+short Air[] = {  (short) Air0, (short) Air1, (short) Air2, (short) Air3, (short) Air4, (short) Air5, (short) Air6, (short) Air7, (short) Air8, (short) Air9, (short) Air10, (short) Air11, (short) Air12, (short) Air13, (short) Air14, (short) Air15, (short) Air16
 #ifndef NOCLAIM
-	, (short) Air13
+	, (short) Air17
 #endif
 	 };
 char *procname[] = {
    "fsm",
    "entorno",
-   "dosverdesomg",
+   "noDosVerdes",
    "peatonP_cruza",
    "peatonS_cruza",
    "espira",
+   "SrojoPeaton",
+   "ProjoPeaton",
    "principalVtoA",
    "principalAtoR",
    "principalRtoV",
    "secundarioVtoA",
    "secundarioAtoR",
    "secundarioRtoV",
+   "peatonPNoMuere",
+   "peatonSNoMuere",
    ":np_:",
 	0
 };
@@ -795,31 +839,35 @@ enum btypes { NONE=0, N_CLAIM=1, I_PROC=2, A_PROC=3, P_PROC=4, E_TRACE=5, N_TRAC
 int Btypes[] = {
    3,	/* fsm */
    3,	/* entorno */
-   1,	/* dosverdesomg */
+   1,	/* noDosVerdes */
    1,	/* peatonP_cruza */
    1,	/* peatonS_cruza */
    1,	/* espira */
+   1,	/* SrojoPeaton */
+   1,	/* ProjoPeaton */
    1,	/* principalVtoA */
    1,	/* principalAtoR */
    1,	/* principalRtoV */
    1,	/* secundarioVtoA */
    1,	/* secundarioAtoR */
    1,	/* secundarioRtoV */
+   1,	/* peatonPNoMuere */
+   1,	/* peatonSNoMuere */
    0	/* :np_: */
 };
 
 #ifndef NOCLAIM
 uchar spin_c_typ[NCLAIMS]; /* claim-types */
 #endif
-uchar *accpstate[13];
-uchar *progstate[13];
-uchar *loopstate[13];
-uchar *reached[13];
-uchar *stopstate[13];
-uchar *visstate[13];
-short *mapstate[13];
+uchar *accpstate[17];
+uchar *progstate[17];
+uchar *loopstate[17];
+uchar *reached[17];
+uchar *stopstate[17];
+uchar *visstate[17];
+short *mapstate[17];
 #ifdef HAS_CODE
-	int NrStates[13];
+	int NrStates[17];
 #endif
 #ifdef TRIX
 int what_p_size(int);
@@ -987,8 +1035,12 @@ addproc(int calling_pid, int priority, int n)
 	case 10: j = sizeof(P10); break;
 	case 11: j = sizeof(P11); break;
 	case 12: j = sizeof(P12); break;
-#ifndef NOCLAIM
 	case 13: j = sizeof(P13); break;
+	case 14: j = sizeof(P14); break;
+	case 15: j = sizeof(P15); break;
+	case 16: j = sizeof(P16); break;
+#ifndef NOCLAIM
+	case 17: j = sizeof(P17); break;
 #endif
 	default: Uerror("bad proc - addproc");
 	}
@@ -1083,44 +1135,56 @@ addproc(int calling_pid, int priority, int n)
 	}
 	switch (n) {
 #ifndef NOCLAIM
-	case 13:	/* claim select */
-		spin_c_typ[0] = 11; /* secundarioRtoV */
-		((P13 *)pptr(h))->c_cur[0] = 10;
-		reached11[10]=1;
-		spin_c_typ[1] = 10; /* secundarioAtoR */
-		((P13 *)pptr(h))->c_cur[1] = 10;
-		reached10[10]=1;
-		spin_c_typ[2] = 9; /* secundarioVtoA */
-		((P13 *)pptr(h))->c_cur[2] = 10;
-		reached9[10]=1;
-		spin_c_typ[3] = 8; /* principalRtoV */
-		((P13 *)pptr(h))->c_cur[3] = 10;
-		reached8[10]=1;
-		spin_c_typ[4] = 7; /* principalAtoR */
-		((P13 *)pptr(h))->c_cur[4] = 10;
-		reached7[10]=1;
-		spin_c_typ[5] = 6; /* principalVtoA */
-		((P13 *)pptr(h))->c_cur[5] = 10;
-		reached6[10]=1;
-		spin_c_typ[6] = 5; /* espira */
-		((P13 *)pptr(h))->c_cur[6] = 3;
+	case 17:	/* claim select */
+		spin_c_typ[0] = 15; /* peatonSNoMuere */
+		((P17 *)pptr(h))->c_cur[0] = 6;
+		reached15[6]=1;
+		spin_c_typ[1] = 14; /* peatonPNoMuere */
+		((P17 *)pptr(h))->c_cur[1] = 6;
+		reached14[6]=1;
+		spin_c_typ[2] = 13; /* secundarioRtoV */
+		((P17 *)pptr(h))->c_cur[2] = 5;
+		reached13[5]=1;
+		spin_c_typ[3] = 12; /* secundarioAtoR */
+		((P17 *)pptr(h))->c_cur[3] = 5;
+		reached12[5]=1;
+		spin_c_typ[4] = 11; /* secundarioVtoA */
+		((P17 *)pptr(h))->c_cur[4] = 5;
+		reached11[5]=1;
+		spin_c_typ[5] = 10; /* principalRtoV */
+		((P17 *)pptr(h))->c_cur[5] = 5;
+		reached10[5]=1;
+		spin_c_typ[6] = 9; /* principalAtoR */
+		((P17 *)pptr(h))->c_cur[6] = 5;
+		reached9[5]=1;
+		spin_c_typ[7] = 8; /* principalVtoA */
+		((P17 *)pptr(h))->c_cur[7] = 5;
+		reached8[5]=1;
+		spin_c_typ[8] = 7; /* ProjoPeaton */
+		((P17 *)pptr(h))->c_cur[8] = 6;
+		reached7[6]=1;
+		spin_c_typ[9] = 6; /* SrojoPeaton */
+		((P17 *)pptr(h))->c_cur[9] = 6;
+		reached6[6]=1;
+		spin_c_typ[10] = 5; /* espira */
+		((P17 *)pptr(h))->c_cur[10] = 3;
 		reached5[3]=1;
-		spin_c_typ[7] = 4; /* peatonS_cruza */
-		((P13 *)pptr(h))->c_cur[7] = 3;
+		spin_c_typ[11] = 4; /* peatonS_cruza */
+		((P17 *)pptr(h))->c_cur[11] = 3;
 		reached4[3]=1;
-		spin_c_typ[8] = 3; /* peatonP_cruza */
-		((P13 *)pptr(h))->c_cur[8] = 3;
+		spin_c_typ[12] = 3; /* peatonP_cruza */
+		((P17 *)pptr(h))->c_cur[12] = 3;
 		reached3[3]=1;
-		spin_c_typ[9] = 2; /* dosverdesomg */
-		((P13 *)pptr(h))->c_cur[9] = 6;
+		spin_c_typ[13] = 2; /* noDosVerdes */
+		((P17 *)pptr(h))->c_cur[13] = 6;
 		reached2[6]=1;
-		((P13 *)pptr(h))->_t = 2;
-		((P13 *)pptr(h))->_p = 6;
-		((P13 *)pptr(h))->_n = 9; /* dosverdesomg */
+		((P17 *)pptr(h))->_t = 2;
+		((P17 *)pptr(h))->_p = 6;
+		((P17 *)pptr(h))->_n = 13; /* noDosVerdes */
 		src_claim = src_ln2;
 #ifndef BFS
 		if (whichclaim == -1 && claimname == NULL)
-			printf("pan: ltl formula dosverdesomg\n");
+			printf("pan: ltl formula noDosVerdes\n");
 #endif
 		if (whichclaim != -1)
 		{	select_claim(whichclaim);
@@ -1128,22 +1192,86 @@ addproc(int calling_pid, int priority, int n)
 		break;
 
 #endif
-	case 12:	/* np_ */
-		((P12 *)pptr(h))->_t = 12;
-		((P12 *)pptr(h))->_p = 0;
+	case 16:	/* np_ */
+		((P16 *)pptr(h))->_t = 16;
+		((P16 *)pptr(h))->_p = 0;
 #ifdef HAS_PRIORITY
-		((P12 *)pptr(h))->_priority = priority;
+		((P16 *)pptr(h))->_priority = priority;
 #endif
-		reached12[0] = 1;
-		accpstate[12][1] = 1;
+		reached16[0] = 1;
+		accpstate[16][1] = 1;
 		break;
-	case 11:	/* secundarioRtoV */
+	case 15:	/* peatonSNoMuere */
+		((P15 *)pptr(h))->_t = 15;
+		((P15 *)pptr(h))->_p = 6;
+#ifdef HAS_PRIORITY
+		((P15 *)pptr(h))->_priority = priority; /* was: 1 */
+#endif
+		reached15[6]=1;
+		src_claim = src_ln15;
+		/* params: */
+		/* locals: */
+#ifdef VAR_RANGES
+#endif
+#ifdef HAS_CODE
+		locinit15(h);
+#endif
+		break;
+	case 14:	/* peatonPNoMuere */
+		((P14 *)pptr(h))->_t = 14;
+		((P14 *)pptr(h))->_p = 6;
+#ifdef HAS_PRIORITY
+		((P14 *)pptr(h))->_priority = priority; /* was: 1 */
+#endif
+		reached14[6]=1;
+		src_claim = src_ln14;
+		/* params: */
+		/* locals: */
+#ifdef VAR_RANGES
+#endif
+#ifdef HAS_CODE
+		locinit14(h);
+#endif
+		break;
+	case 13:	/* secundarioRtoV */
+		((P13 *)pptr(h))->_t = 13;
+		((P13 *)pptr(h))->_p = 5;
+#ifdef HAS_PRIORITY
+		((P13 *)pptr(h))->_priority = priority; /* was: 1 */
+#endif
+		reached13[5]=1;
+		src_claim = src_ln13;
+		/* params: */
+		/* locals: */
+#ifdef VAR_RANGES
+#endif
+#ifdef HAS_CODE
+		locinit13(h);
+#endif
+		break;
+	case 12:	/* secundarioAtoR */
+		((P12 *)pptr(h))->_t = 12;
+		((P12 *)pptr(h))->_p = 5;
+#ifdef HAS_PRIORITY
+		((P12 *)pptr(h))->_priority = priority; /* was: 1 */
+#endif
+		reached12[5]=1;
+		src_claim = src_ln12;
+		/* params: */
+		/* locals: */
+#ifdef VAR_RANGES
+#endif
+#ifdef HAS_CODE
+		locinit12(h);
+#endif
+		break;
+	case 11:	/* secundarioVtoA */
 		((P11 *)pptr(h))->_t = 11;
-		((P11 *)pptr(h))->_p = 10;
+		((P11 *)pptr(h))->_p = 5;
 #ifdef HAS_PRIORITY
 		((P11 *)pptr(h))->_priority = priority; /* was: 1 */
 #endif
-		reached11[10]=1;
+		reached11[5]=1;
 		src_claim = src_ln11;
 		/* params: */
 		/* locals: */
@@ -1153,13 +1281,13 @@ addproc(int calling_pid, int priority, int n)
 		locinit11(h);
 #endif
 		break;
-	case 10:	/* secundarioAtoR */
+	case 10:	/* principalRtoV */
 		((P10 *)pptr(h))->_t = 10;
-		((P10 *)pptr(h))->_p = 10;
+		((P10 *)pptr(h))->_p = 5;
 #ifdef HAS_PRIORITY
 		((P10 *)pptr(h))->_priority = priority; /* was: 1 */
 #endif
-		reached10[10]=1;
+		reached10[5]=1;
 		src_claim = src_ln10;
 		/* params: */
 		/* locals: */
@@ -1169,13 +1297,13 @@ addproc(int calling_pid, int priority, int n)
 		locinit10(h);
 #endif
 		break;
-	case 9:	/* secundarioVtoA */
+	case 9:	/* principalAtoR */
 		((P9 *)pptr(h))->_t = 9;
-		((P9 *)pptr(h))->_p = 10;
+		((P9 *)pptr(h))->_p = 5;
 #ifdef HAS_PRIORITY
 		((P9 *)pptr(h))->_priority = priority; /* was: 1 */
 #endif
-		reached9[10]=1;
+		reached9[5]=1;
 		src_claim = src_ln9;
 		/* params: */
 		/* locals: */
@@ -1185,13 +1313,13 @@ addproc(int calling_pid, int priority, int n)
 		locinit9(h);
 #endif
 		break;
-	case 8:	/* principalRtoV */
+	case 8:	/* principalVtoA */
 		((P8 *)pptr(h))->_t = 8;
-		((P8 *)pptr(h))->_p = 10;
+		((P8 *)pptr(h))->_p = 5;
 #ifdef HAS_PRIORITY
 		((P8 *)pptr(h))->_priority = priority; /* was: 1 */
 #endif
-		reached8[10]=1;
+		reached8[5]=1;
 		src_claim = src_ln8;
 		/* params: */
 		/* locals: */
@@ -1201,13 +1329,13 @@ addproc(int calling_pid, int priority, int n)
 		locinit8(h);
 #endif
 		break;
-	case 7:	/* principalAtoR */
+	case 7:	/* ProjoPeaton */
 		((P7 *)pptr(h))->_t = 7;
-		((P7 *)pptr(h))->_p = 10;
+		((P7 *)pptr(h))->_p = 6;
 #ifdef HAS_PRIORITY
 		((P7 *)pptr(h))->_priority = priority; /* was: 1 */
 #endif
-		reached7[10]=1;
+		reached7[6]=1;
 		src_claim = src_ln7;
 		/* params: */
 		/* locals: */
@@ -1217,13 +1345,13 @@ addproc(int calling_pid, int priority, int n)
 		locinit7(h);
 #endif
 		break;
-	case 6:	/* principalVtoA */
+	case 6:	/* SrojoPeaton */
 		((P6 *)pptr(h))->_t = 6;
-		((P6 *)pptr(h))->_p = 10;
+		((P6 *)pptr(h))->_p = 6;
 #ifdef HAS_PRIORITY
 		((P6 *)pptr(h))->_priority = priority; /* was: 1 */
 #endif
-		reached6[10]=1;
+		reached6[6]=1;
 		src_claim = src_ln6;
 		/* params: */
 		/* locals: */
@@ -1281,7 +1409,7 @@ addproc(int calling_pid, int priority, int n)
 		locinit3(h);
 #endif
 		break;
-	case 2:	/* dosverdesomg */
+	case 2:	/* noDosVerdes */
 		((P2 *)pptr(h))->_t = 2;
 		((P2 *)pptr(h))->_p = 6;
 #ifdef HAS_PRIORITY
@@ -1365,6 +1493,10 @@ col_p(int i, char *z)
 	case 10: j = sizeof(P10); break;
 	case 11: j = sizeof(P11); break;
 	case 12: j = sizeof(P12); break;
+	case 13: j = sizeof(P13); break;
+	case 14: j = sizeof(P14); break;
+	case 15: j = sizeof(P15); break;
+	case 16: j = sizeof(P16); break;
 	default: Uerror("bad proctype - collapse");
 	}
 	if (z) x = z; else x = scratch;
@@ -1455,6 +1587,10 @@ run(void)
 	Maxbody = max(Maxbody, ((int) sizeof(P10)));
 	Maxbody = max(Maxbody, ((int) sizeof(P11)));
 	Maxbody = max(Maxbody, ((int) sizeof(P12)));
+	Maxbody = max(Maxbody, ((int) sizeof(P13)));
+	Maxbody = max(Maxbody, ((int) sizeof(P14)));
+	Maxbody = max(Maxbody, ((int) sizeof(P15)));
+	Maxbody = max(Maxbody, ((int) sizeof(P16)));
 	reached[0] = reached0;
 	reached[1] = reached1;
 	reached[2] = reached2;
@@ -1468,6 +1604,10 @@ run(void)
 	reached[10] = reached10;
 	reached[11] = reached11;
 	reached[12] = reached12;
+	reached[13] = reached13;
+	reached[14] = reached14;
+	reached[15] = reached15;
+	reached[16] = reached16;
 	accpstate[0] = (uchar *) emalloc(_nstates0);
 	accpstate[1] = (uchar *) emalloc(_nstates1);
 	accpstate[2] = (uchar *) emalloc(_nstates2);
@@ -1481,6 +1621,10 @@ run(void)
 	accpstate[10] = (uchar *) emalloc(_nstates10);
 	accpstate[11] = (uchar *) emalloc(_nstates11);
 	accpstate[12] = (uchar *) emalloc(_nstates12);
+	accpstate[13] = (uchar *) emalloc(_nstates13);
+	accpstate[14] = (uchar *) emalloc(_nstates14);
+	accpstate[15] = (uchar *) emalloc(_nstates15);
+	accpstate[16] = (uchar *) emalloc(_nstates16);
 	progstate[0] = (uchar *) emalloc(_nstates0);
 	progstate[1] = (uchar *) emalloc(_nstates1);
 	progstate[2] = (uchar *) emalloc(_nstates2);
@@ -1494,6 +1638,10 @@ run(void)
 	progstate[10] = (uchar *) emalloc(_nstates10);
 	progstate[11] = (uchar *) emalloc(_nstates11);
 	progstate[12] = (uchar *) emalloc(_nstates12);
+	progstate[13] = (uchar *) emalloc(_nstates13);
+	progstate[14] = (uchar *) emalloc(_nstates14);
+	progstate[15] = (uchar *) emalloc(_nstates15);
+	progstate[16] = (uchar *) emalloc(_nstates16);
 	loopstate0 = loopstate[0] = (uchar *) emalloc(_nstates0);
 	loopstate1 = loopstate[1] = (uchar *) emalloc(_nstates1);
 	loopstate2 = loopstate[2] = (uchar *) emalloc(_nstates2);
@@ -1507,6 +1655,10 @@ run(void)
 	loopstate10 = loopstate[10] = (uchar *) emalloc(_nstates10);
 	loopstate11 = loopstate[11] = (uchar *) emalloc(_nstates11);
 	loopstate12 = loopstate[12] = (uchar *) emalloc(_nstates12);
+	loopstate13 = loopstate[13] = (uchar *) emalloc(_nstates13);
+	loopstate14 = loopstate[14] = (uchar *) emalloc(_nstates14);
+	loopstate15 = loopstate[15] = (uchar *) emalloc(_nstates15);
+	loopstate16 = loopstate[16] = (uchar *) emalloc(_nstates16);
 	stopstate[0] = (uchar *) emalloc(_nstates0);
 	stopstate[1] = (uchar *) emalloc(_nstates1);
 	stopstate[2] = (uchar *) emalloc(_nstates2);
@@ -1520,6 +1672,10 @@ run(void)
 	stopstate[10] = (uchar *) emalloc(_nstates10);
 	stopstate[11] = (uchar *) emalloc(_nstates11);
 	stopstate[12] = (uchar *) emalloc(_nstates12);
+	stopstate[13] = (uchar *) emalloc(_nstates13);
+	stopstate[14] = (uchar *) emalloc(_nstates14);
+	stopstate[15] = (uchar *) emalloc(_nstates15);
+	stopstate[16] = (uchar *) emalloc(_nstates16);
 	visstate[0] = (uchar *) emalloc(_nstates0);
 	visstate[1] = (uchar *) emalloc(_nstates1);
 	visstate[2] = (uchar *) emalloc(_nstates2);
@@ -1533,6 +1689,10 @@ run(void)
 	visstate[10] = (uchar *) emalloc(_nstates10);
 	visstate[11] = (uchar *) emalloc(_nstates11);
 	visstate[12] = (uchar *) emalloc(_nstates12);
+	visstate[13] = (uchar *) emalloc(_nstates13);
+	visstate[14] = (uchar *) emalloc(_nstates14);
+	visstate[15] = (uchar *) emalloc(_nstates15);
+	visstate[16] = (uchar *) emalloc(_nstates16);
 	mapstate[0] = (short *) emalloc(_nstates0 * sizeof(short));
 	mapstate[1] = (short *) emalloc(_nstates1 * sizeof(short));
 	mapstate[2] = (short *) emalloc(_nstates2 * sizeof(short));
@@ -1546,6 +1706,10 @@ run(void)
 	mapstate[10] = (short *) emalloc(_nstates10 * sizeof(short));
 	mapstate[11] = (short *) emalloc(_nstates11 * sizeof(short));
 	mapstate[12] = (short *) emalloc(_nstates12 * sizeof(short));
+	mapstate[13] = (short *) emalloc(_nstates13 * sizeof(short));
+	mapstate[14] = (short *) emalloc(_nstates14 * sizeof(short));
+	mapstate[15] = (short *) emalloc(_nstates15 * sizeof(short));
+	mapstate[16] = (short *) emalloc(_nstates16 * sizeof(short));
 	stopstate[0][_endstate0] = 1;
 	stopstate[1][_endstate1] = 1;
 	stopstate[2][_endstate2] = 1;
@@ -1559,6 +1723,10 @@ run(void)
 	stopstate[10][_endstate10] = 1;
 	stopstate[11][_endstate11] = 1;
 	stopstate[12][_endstate12] = 1;
+	stopstate[13][_endstate13] = 1;
+	stopstate[14][_endstate14] = 1;
+	stopstate[15][_endstate15] = 1;
+	stopstate[16][_endstate16] = 1;
 #ifdef HAS_CODE
 	NrStates[0] = _nstates0;
 	NrStates[1] = _nstates1;
@@ -1573,30 +1741,26 @@ run(void)
 	NrStates[10] = _nstates10;
 	NrStates[11] = _nstates11;
 	NrStates[12] = _nstates12;
+	NrStates[13] = _nstates13;
+	NrStates[14] = _nstates14;
+	NrStates[15] = _nstates15;
+	NrStates[16] = _nstates16;
 #endif
 
 	Maxbody = max(Maxbody, sizeof(State)-VECTORSZ);
 	if ((Maxbody % WS) != 0)
 		Maxbody += WS - (Maxbody % WS);
 
-	accpstate[11][37] = 1;
-	accpstate[11][26] = 1;
-	accpstate[11][18] = 1;
-	accpstate[10][37] = 1;
-	accpstate[10][26] = 1;
-	accpstate[10][18] = 1;
-	accpstate[9][37] = 1;
-	accpstate[9][26] = 1;
-	accpstate[9][18] = 1;
-	accpstate[8][37] = 1;
-	accpstate[8][26] = 1;
-	accpstate[8][18] = 1;
-	accpstate[7][37] = 1;
-	accpstate[7][26] = 1;
-	accpstate[7][18] = 1;
-	accpstate[6][37] = 1;
-	accpstate[6][26] = 1;
-	accpstate[6][18] = 1;
+	accpstate[15][9] = 1;
+	accpstate[14][9] = 1;
+	accpstate[13][10] = 1;
+	accpstate[12][10] = 1;
+	accpstate[11][10] = 1;
+	accpstate[10][10] = 1;
+	accpstate[9][10] = 1;
+	accpstate[8][10] = 1;
+	accpstate[7][9] = 1;
+	accpstate[6][9] = 1;
 	accpstate[5][3] = 1;
 	accpstate[4][3] = 1;
 	accpstate[3][3] = 1;
@@ -1613,6 +1777,10 @@ run(void)
 	retrans(9, _nstates9, _start9, src_ln9, reached9, loopstate9);
 	retrans(10, _nstates10, _start10, src_ln10, reached10, loopstate10);
 	retrans(11, _nstates11, _start11, src_ln11, reached11, loopstate11);
+	retrans(12, _nstates12, _start12, src_ln12, reached12, loopstate12);
+	retrans(13, _nstates13, _start13, src_ln13, reached13, loopstate13);
+	retrans(14, _nstates14, _start14, src_ln14, reached14, loopstate14);
+	retrans(15, _nstates15, _start15, src_ln15, reached15, loopstate15);
 	if (state_tables)
 	{ if (dodot) exit(0);
 	  printf("\nTransition Type: ");
@@ -12964,6 +13132,10 @@ do_reach(void)
 	r_ck(reached9, _nstates9, 9, src_ln9, src_file9);
 	r_ck(reached10, _nstates10, 10, src_ln10, src_file10);
 	r_ck(reached11, _nstates11, 11, src_ln11, src_file11);
+	r_ck(reached12, _nstates12, 12, src_ln12, src_file12);
+	r_ck(reached13, _nstates13, 13, src_ln13, src_file13);
+	r_ck(reached14, _nstates14, 14, src_ln14, src_file14);
+	r_ck(reached15, _nstates15, 15, src_ln15, src_file15);
 }
 
 void
@@ -13087,6 +13259,10 @@ what_p_size(int t)
 	case 10: j = sizeof(P10); break;
 	case 11: j = sizeof(P11); break;
 	case 12: j = sizeof(P12); break;
+	case 13: j = sizeof(P13); break;
+	case 14: j = sizeof(P14); break;
+	case 15: j = sizeof(P15); break;
+	case 16: j = sizeof(P16); break;
 	default: Uerror("bad proctype");
 	}
 	return j;
@@ -14728,6 +14904,18 @@ void
 c_locals(int pid, int tp)
 {	/* int i; */
 	switch(tp) {
+	case 15:
+		/* none */
+		break;
+	case 14:
+		/* none */
+		break;
+	case 13:
+		/* none */
+		break;
+	case 12:
+		/* none */
+		break;
 	case 11:
 		/* none */
 		break;
@@ -14786,7 +14974,7 @@ c_chandump(int unused)
 {	unused++; /* avoid complaints */
 }
 
-Trans *t_id_lkup[344];
+Trans *t_id_lkup[234];
 
 
 #ifdef BFS_PAR
