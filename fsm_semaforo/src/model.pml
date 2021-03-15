@@ -1,6 +1,6 @@
 mtype = { P_Verde, P_VerToAm, P_Amarillo, S_Verde, S_VerToAm, S_Amarillo }
 
-ltl dosverdesomg {
+ltl noDosVerdes {
 	[] !(p_verde && s_verde)
 }
 ltl peatonP_cruza {
@@ -15,6 +15,7 @@ ltl espira {
 /*ltl principalVtoA {
     !p_verde W p_amarillo
 }
+<<<<<<< HEAD
 ltl principalAtoR {
     !p_amarillo W p_rojo
 }
@@ -30,6 +31,16 @@ ltl secundarioAtoR {
 ltl secundarioRtoV {
     !s_rojo W s_verde
 }*/
+=======
+ltl peatonPNoMuere{
+    [] (p_verde && !p_peaton)
+}
+ltl peatonSNoMuere{
+    [] (s_verde && !s_peaton)
+}
+
+
+>>>>>>> c6e3a643c2973503670da071d59491c5c14295d8
 
 /* Entradas */
 int espira;
