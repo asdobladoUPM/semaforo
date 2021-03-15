@@ -76,12 +76,12 @@ active proctype fsm ()
             }
             :: (estado == P_VerToAm) -> atomic {
                 if
-                :: deadline -> deadline = 0; p_verde = 0; p_amarillo = 1; s_peaton = 0; estado = P_Amarillo;
+                :: deadline -> deadline = 0; p_verde = 0; p_amarillo = 1; estado = P_Amarillo;
                 fi
             }
             :: (estado == P_Amarillo) -> atomic {
                 if
-                :: deadline -> deadline = 0; s_rojo = 0; s_verde = 1; p_peaton = 1; p_rojo = 1; p_amarillo = 0; estado = S_Verde;
+                :: deadline -> deadline = 0; p_amarillo = 0; p_rojo = 1; p_peaton = 1; s_rojo = 0; s_verde = 1;  s_peaton = 0; estado = S_Verde;
                 fi
             }
             :: (estado == S_Verde) -> atomic {
@@ -92,12 +92,12 @@ active proctype fsm ()
             }
             :: (estado == S_VerToAm) -> atomic {
                 if
-                :: deadline -> deadline = 0; estado = S_Amarillo; p_peaton = 0; s_verde = 0; s_amarillo = 1;
+                :: deadline -> deadline = 0; estado = S_Amarillo; s_verde = 0; s_amarillo = 1;
                 fi
             }
             :: (estado == S_Amarillo) -> atomic {
                 if
-                :: deadline -> deadline = 0; estado = P_Verde; s_peaton = 1; s_rojo = 1; s_amarillo = 0; p_rojo = 0; p_verde = 1;
+                :: deadline -> deadline = 0; estado = P_Verde; s_peaton = 1; s_rojo = 1; s_amarillo = 0; p_rojo = 0; p_verde = 1; p_peaton=0;
                 fi
             }
         fi;
