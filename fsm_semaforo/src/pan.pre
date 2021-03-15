@@ -1,7 +1,11 @@
+# 1 "model.pml"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "model.pml"
 mtype = { P_Verde, P_VerToAm, P_Amarillo, S_Verde, S_VerToAm, S_Amarillo }
 
 ltl dosverdesomg {
-	[] !(p_verde && s_verde)
+ [] !(p_verde && s_verde)
 }
 ltl peatonP_cruza {
     [] botonP -> <> p_peaton
@@ -12,7 +16,7 @@ ltl peatonS_cruza {
 ltl espira {
     [] espira -> <> s_verde
 }
-/*ltl principalVtoA {
+ltl principalVtoA {
     !p_verde W p_amarillo
 }
 ltl principalAtoR {
@@ -29,14 +33,14 @@ ltl secundarioAtoR {
 }
 ltl secundarioRtoV {
     !s_rojo W s_verde
-}*/
+}
 
-/* Entradas */
+
 int espira;
 int botonP;
 int botonS;
 
-/* Salidas */
+
 int p_verde;
 int p_amarillo;
 int p_rojo;
@@ -50,7 +54,7 @@ int s_peaton;
 int estado;
 int deadline;
 
-active proctype fsm () 
+active proctype fsm ()
 {
     estado = P_Verde;
     p_verde = 1;
@@ -75,7 +79,7 @@ active proctype fsm ()
             }
             :: (estado == S_Verde) -> atomic {
                 if
-                :: botonS -> botonS = 0; estado = S_VerToAm; 
+                :: botonS -> botonS = 0; estado = S_VerToAm;
                 :: deadline -> deadline = 0; estado = S_Amarillo; s_verde = 0; s_amarillo = 1;
                 fi
             }
