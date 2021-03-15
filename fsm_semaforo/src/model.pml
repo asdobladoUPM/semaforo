@@ -31,7 +31,7 @@ ltl secundarioAtoR {
 ltl secundarioRtoV {
     !s_rojo W s_verde
 }*/
-=======
+
 ltl peatonPNoMuere{
     [] (p_verde && !p_peaton)
 }
@@ -39,8 +39,6 @@ ltl peatonSNoMuere{
     [] (s_verde && !s_peaton)
 }
 
-
->>>>>>> c6e3a643c2973503670da071d59491c5c14295d8
 
 /* Entradas */
 int espira;
