@@ -6,7 +6,7 @@
 #include "fsm_semaforo.h"
 #include "fsm_semaforo_internal.h"
 
-#include "mock_client.h"
+#include "mock_actions.h"
 #include "mock_timer.h"
 
 void setUp(void)

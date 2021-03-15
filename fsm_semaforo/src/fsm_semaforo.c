@@ -5,7 +5,7 @@
 #include "fsm_semaforo_internal.h"
 
 #include "timer.h"
-#include "client.h"
+#include "actions.h"
 
 static int espiraObotonP(fsm_t *f)
 {

@@ -1,5 +1,5 @@
-#ifndef _CLIENT_H
-#define _CLIENT_H
+#ifndef _ACTIONS_H
+#define _ACTIONS_H
 
 int espira(void);
 int botonS(void);
