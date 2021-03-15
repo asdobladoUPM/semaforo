@@ -140,84 +140,84 @@ typedef struct S_F_MAP {
 } S_F_MAP;
 
 #define _nstates15	11	/* peatonSNoMuere */
-#define minseq15	224
-#define maxseq15	233
+#define minseq15	223
+#define maxseq15	232
 #define _endstate15	10
 
 #define _nstates14	11	/* peatonPNoMuere */
-#define minseq14	214
-#define maxseq14	223
+#define minseq14	213
+#define maxseq14	222
 #define _endstate14	10
 
 #define _nstates13	14	/* secundarioRtoV */
-#define minseq13	201
-#define maxseq13	213
+#define minseq13	200
+#define maxseq13	212
 #define _endstate13	13
 
 #define _nstates12	14	/* secundarioAtoR */
-#define minseq12	188
-#define maxseq12	200
+#define minseq12	187
+#define maxseq12	199
 #define _endstate12	13
 
 #define _nstates11	14	/* secundarioVtoA */
-#define minseq11	175
-#define maxseq11	187
+#define minseq11	174
+#define maxseq11	186
 #define _endstate11	13
 
 #define _nstates10	14	/* principalRtoV */
-#define minseq10	162
-#define maxseq10	174
+#define minseq10	161
+#define maxseq10	173
 #define _endstate10	13
 
 #define _nstates9	14	/* principalAtoR */
-#define minseq9	149
-#define maxseq9	161
+#define minseq9	148
+#define maxseq9	160
 #define _endstate9	13
 
 #define _nstates8	14	/* principalVtoA */
-#define minseq8	136
-#define maxseq8	148
+#define minseq8	135
+#define maxseq8	147
 #define _endstate8	13
 
 #define _nstates7	11	/* ProjoPeaton */
-#define minseq7	126
-#define maxseq7	135
+#define minseq7	125
+#define maxseq7	134
 #define _endstate7	10
 
 #define _nstates6	11	/* SrojoPeaton */
-#define minseq6	116
-#define maxseq6	125
+#define minseq6	115
+#define maxseq6	124
 #define _endstate6	10
 
 #define _nstates5	7	/* espira */
-#define minseq5	110
-#define maxseq5	115
+#define minseq5	109
+#define maxseq5	114
 #define _endstate5	6
 
 #define _nstates4	7	/* peatonS_cruza */
-#define minseq4	104
-#define maxseq4	109
+#define minseq4	103
+#define maxseq4	108
 #define _endstate4	6
 
 #define _nstates3	7	/* peatonP_cruza */
-#define minseq3	98
-#define maxseq3	103
+#define minseq3	97
+#define maxseq3	102
 #define _endstate3	6
 
 #define _nstates2	11	/* noDosVerdes */
-#define minseq2	88
-#define maxseq2	97
+#define minseq2	87
+#define maxseq2	96
 #define _endstate2	10
 
 #define _nstates1	13	/* entorno */
-#define minseq1	76
-#define maxseq1	87
+#define minseq1	75
+#define maxseq1	86
 #define _endstate1	12
 
-#define _nstates0	77	/* fsm */
+#define _nstates0	76	/* fsm */
 #define minseq0	0
-#define maxseq0	75
-#define _endstate0	76
+#define maxseq0	74
+#define _endstate0	75
 
 extern short src_ln15[];
 extern short src_ln14[];

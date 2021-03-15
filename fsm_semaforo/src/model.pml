@@ -94,12 +94,12 @@ active proctype fsm ()
             }
             :: (estado == S_VerToAm) -> atomic {
                 if
-                :: deadline -> deadline = 0; estado = S_Amarillo; p_peaton = 0; s_verde = 0; p_verde = 0; s_amarillo = 1;
+                :: deadline -> deadline = 0; estado = S_Amarillo; p_peaton = 0; s_verde = 0; s_amarillo = 1;
                 fi
             }
             :: (estado == S_Amarillo) -> atomic {
                 if
-                :: deadline -> deadline = 0; estado = P_Verde; s_rojo = 1; s_peaton = 1; s_amarillo = 0; p_rojo = 0; p_verde = 1;
+                :: deadline -> deadline = 0; estado = P_Verde; s_peaton = 1; s_rojo = 1; s_amarillo = 0; p_rojo = 0; p_verde = 1;
                 fi
             }
         fi;
