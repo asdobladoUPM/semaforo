@@ -18,24 +18,6 @@ ltl SrojoPeaton{
 ltl ProjoPeaton{
     [] ((p_rojo && p_peaton)||(!p_rojo && !p_peaton))
 }
-ltl principalVtoA {
-    <>(!p_verde W p_amarillo)
-}
-ltl principalAtoR {
-    <>(!p_amarillo W p_rojo)
-}
-ltl principalRtoV {
-    <>(!p_rojo W p_verde)
-}
-ltl secundarioVtoA {
-    <>(!s_verde W s_amarillo)
-}
-ltl secundarioAtoR {
-    <>(!s_amarillo W s_rojo)
-}
-ltl secundarioRtoV {
-    <>(!s_rojo W s_verde)
-}
 ltl peatonPNoMuere{
     [] !(p_verde && p_peaton)
 }
@@ -44,6 +26,13 @@ ltl peatonSNoMuere{
 }
 ltl algunoRojo{
     [] (p_rojo || s_rojo)
+}
+
+ltl principalAmarillo {
+    [](p_verde & !p_rojo -> (!p_rojo W (p_amarillo & !p_rojo)))
+}
+ltl secundarioAmarillo {
+    [](s_verde & !s_rojo -> (!s_rojo W (s_amarillo & !s_rojo)))
 }
 
 /* Entradas */
