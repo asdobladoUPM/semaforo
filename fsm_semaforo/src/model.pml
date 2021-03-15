@@ -31,7 +31,6 @@ ltl peatonSNoMuere{
     [] !(s_verde && s_peaton)
 }
 
-//Comprobarcion de patrones
 ltl principalAmarillo {
     [](p_verde & !p_rojo -> (!p_rojo W (p_amarillo & !p_rojo)))
 }
