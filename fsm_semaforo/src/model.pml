@@ -38,6 +38,20 @@ ltl secundarioAmarillo {
     [](s_verde & !s_rojo -> (!s_rojo W (s_amarillo & !s_rojo)))
 }
 
+ltl principalVerde {
+    [](p_rojo & !p_amarillo -> (!p_amarillo W (p_verde & !p_amarillo)))
+}
+ltl secundarioVerde {
+    [](s_rojo & !s_amarillo -> (!s_amarillo W (s_verde & !s_amarillo)))
+}
+
+ltl principalRojo {
+    [](p_amarillo & !p_verde -> (!p_verde W (p_rojo & !p_verde)))
+}
+ltl secundarioRojo {
+    [](s_amarillo & !s_verde -> (!s_verde W (s_rojo & !s_verde)))
+}
+
 /* Entradas */
 int espira;
 int botonP;
